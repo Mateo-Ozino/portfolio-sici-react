@@ -40,16 +40,22 @@ body {
 
 .mainContainer {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 0;
+  height: 100vh;
 }
 
 header {
   width: 35%;
+  height: 100%;
 }
 
 main {
   width: 100%;
+  height: 100%;
+  overflow: hidden auto;
 }
 
 .menu {
@@ -91,6 +97,50 @@ main {
 }
 .menu__credits > p {
   margin: 0;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 40px 60px 40px;
+}
+.about__image {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  background: url("../assets/profile_pic.jpeg"), lightgray 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about__name {
+  font: normal 500 26px/normal "Poppins";
+  margin: 24px 0 14px 0;
+}
+.about__subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.about > article {
+  display: flex;
+  gap: 80px;
+}
+.about > article > div > h3 {
+  font: normal 500 22px/normal "Poppins";
+  margin-bottom: 20px;
+}
+.about > article > div > p {
+  font: normal 400 18px/normal "Poppins";
+  line-height: 27px;
+  margin: 0;
+}
+.about > article > div > p > span {
+  display: block;
+  margin-bottom: 10px;
+}
+.about > article > div > .about__p__large {
+  width: 40ch;
 }
 
 /*# sourceMappingURL=style.css.map */

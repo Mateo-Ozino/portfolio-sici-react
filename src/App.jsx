@@ -1,15 +1,7 @@
 import './css/style.css'
 import { Route, Routes } from 'react-router-dom'
 import { Menu } from './components/Menu'
-
-const About = () => {
-  return(
-    <section>
-      <h1>About Page</h1>
-      <p>Hola Soy Sicilia</p>
-    </section>
-  )
-}
+import { About } from './components/About'
 
 const Projects = () => {
   return(
@@ -34,15 +26,6 @@ function App() {
   return (
     <div className='mainContainer'>
       <header>
-        {/* <h1>Hello World</h1>
-        <nav>
-          <ul>
-            <li><NavLink to="/">About</NavLink></li>
-            <li><NavLink to="/projects">Projects</NavLink></li>
-            <li><NavLink to="/skills">Skills</NavLink></li>
-            <li><NavLink to="/skills">Contact</NavLink></li>
-          </ul>
-        </nav> */}
         <Menu />
       </header>
       <main>
