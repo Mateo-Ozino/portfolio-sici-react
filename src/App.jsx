@@ -2,6 +2,7 @@ import './css/style.css'
 import { Route, Routes } from 'react-router-dom'
 import { Menu } from './components/Menu'
 import { About } from './components/About'
+import { Skills } from './components/Skills'
 
 const Projects = () => {
   return(
@@ -9,11 +10,6 @@ const Projects = () => {
   )
 }
 
-const Skills = () => {
-  return(
-    <h1>Skills Page</h1>
-  )
-}
 
 const Contact = () => {
   return(
@@ -31,8 +27,8 @@ function App() {
       <main>
       <Routes>
         <Route path='/' element={<About />}/>
-        <Route path='/projects' element={<Projects />}/>
         <Route path='/skills' element={<Skills />}/>
+        <Route path='/projects' element={<Projects />}/>
         <Route path='/contact' element={<Contact />}/>
         <Route path='*' element={<h1>Not Found</h1>}/>
       </Routes>
