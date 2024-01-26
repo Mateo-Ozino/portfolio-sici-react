@@ -21,9 +21,9 @@ const Contact = () => {
 function App() {
   return (
     <div className='mainContainer'>
-      <header>
+      <aside>
         <Menu />
-      </header>
+      </aside>
       <main>
       <Routes>
         <Route path='/' element={<About />}/>

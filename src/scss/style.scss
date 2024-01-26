@@ -15,7 +15,7 @@ body {
   height: 100vh;
 }
 
-header {
+aside {
   width: 35%;
   height: 100%;
 }
@@ -26,12 +26,13 @@ main {
   overflow: hidden auto;
 }
 
-// // MENU STYLES
+// MENU STYLES
 .menu {
-  height: 100%;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -56,7 +57,7 @@ main {
     text-decoration: none;
     color: white;
     font: variables.$h4;
-    padding: 20px 60px;
+    padding: 30px 60px;
   }
   &__credits {
     max-width: 31ch;
@@ -135,9 +136,6 @@ main {
           margin-bottom: 10px;
         }
       }
-      > .about__p__large {
-        width: 40ch;
-      }
     }
   }
 }
@@ -168,5 +166,20 @@ main {
     padding: 20px 45px;
     position: relative;
     width: 160px;
+  }
+}
+
+@media screen and (max-height: 675px) {
+  .menu__navbar > li > a {
+    padding: 20px 60px;
+  }
+  .menu {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about > article {
+    flex-direction: column;
   }
 }

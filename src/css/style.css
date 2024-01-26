@@ -47,7 +47,7 @@ body {
   height: 100vh;
 }
 
-header {
+aside {
   width: 35%;
   height: 100%;
 }
@@ -59,10 +59,11 @@ main {
 }
 
 .menu {
-  height: 100%;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -88,7 +89,7 @@ main {
   text-decoration: none;
   color: white;
   font: normal 500 18px/normal "Poppins";
-  padding: 20px 60px;
+  padding: 30px 60px;
 }
 .menu__credits {
   max-width: 31ch;
@@ -166,9 +167,6 @@ main {
   display: block;
   margin-bottom: 10px;
 }
-.about > article > div > .about__p__large {
-  width: 40ch;
-}
 
 .hard-skills {
   display: grid;
@@ -208,6 +206,20 @@ main {
   padding: 20px 45px;
   position: relative;
   width: 160px;
+}
+
+@media screen and (max-height: 675px) {
+  .menu__navbar > li > a {
+    padding: 20px 60px;
+  }
+  .menu {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about > article {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
