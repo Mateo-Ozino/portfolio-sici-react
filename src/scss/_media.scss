@@ -1,0 +1,15 @@
+@media screen and (max-height: 665px) {
+  .menu {
+    justify-content: space-evenly;
+    .menu__navbar > li > a {
+      padding: 20px 60px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .about > article {
+    flex-direction: column;
+  }
+}

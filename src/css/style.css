@@ -32,6 +32,22 @@ p {
   text-wrap: pretty;
 }
 
+@media screen and (max-height: 665px) {
+  .menu {
+    justify-content: space-evenly;
+  }
+  .menu .menu__navbar > li > a {
+    padding: 20px 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about > article {
+    flex-direction: column;
+  }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   background-image: url("../assets/HOME - ABOUT ME.png");
   background-size: cover;
@@ -168,58 +184,98 @@ main {
   margin-bottom: 10px;
 }
 
-.hard-skills {
+.skills .hard-skills h2 {
+  font: normal 500 26px/normal "Poppins";
+}
+.skills .hard-skills .hard-skills__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
-.hard-skills .color_theory {
+.skills .hard-skills .hard-skills__container .color_theory {
   grid-area: 1/1/2/2;
 }
-.hard-skills .figma {
+.skills .hard-skills .hard-skills__container .figma {
   grid-area: 1/2/2/3;
 }
-.hard-skills .adobe_cc {
+.skills .hard-skills .hard-skills__container .adobe_cc {
   grid-area: 1/3/2/4;
 }
-.hard-skills .graphic_design {
+.skills .hard-skills .hard-skills__container .graphic_design {
   grid-area: 2/1/3/2;
 }
-.hard-skills .typography {
+.skills .hard-skills .hard-skills__container .typography {
   grid-area: 2/2/3/3;
 }
-.hard-skills .ux_ui {
+.skills .hard-skills .hard-skills__container .ux_ui {
   grid-area: 2/3/3/4;
 }
-.hard-skills .hard-skill {
+.skills .hard-skills .hard-skills__container .hard-skill {
   align-items: center;
   background: linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
   border-radius: 34px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  height: 199px;
   justify-content: center;
   overflow: hidden;
   padding: 20px 45px;
-  position: relative;
-  width: 160px;
 }
-
-@media screen and (max-height: 675px) {
-  .menu__navbar > li > a {
-    padding: 20px 60px;
-  }
-  .menu {
-    justify-content: space-evenly;
-  }
+.skills .hard-skills .hard-skills__container .hard-skill p {
+  text-align: center;
 }
-@media screen and (max-width: 1024px) {
-  .about > article {
-    flex-direction: column;
-  }
+.skills .soft-skills h2 {
+  font: normal 500 26px/normal "Poppins";
+}
+.skills .soft-skills .soft-skills__list {
+  list-style-image: url("../assets/gem_icon.png");
+  border-radius: 34px;
+  background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
+  padding: 40px 58px;
+}
+.skills .soft-skills .soft-skills__list li {
+  padding: 0px 0px 15px 5px;
+}
+.skills .studies h2 {
+  font: normal 500 26px/normal "Poppins";
+}
+.skills .studies .studies-details .studies-details__list {
+  list-style-image: url("../assets/gem_icon.png");
+  border-radius: 34px;
+  background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
+  padding: 40px 58px;
+}
+.skills .studies .studies-details .studies-details__list li {
+  padding: 0px 0px 25px 5px;
+}
+.skills .studies .idioms {
+  width: 80%;
+}
+.skills .studies .idioms .idioms__list {
+  list-style-image: url("../assets/gem_icon.png");
+  border-radius: 34px;
+  background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
+  padding: 40px 58px;
+}
+.skills .studies .idioms .idioms__list li {
+  padding: 0px 0px 15px 5px;
+}
+.skills .studies .idioms .idioms__list li > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skills .studies .idioms .idioms__list li > div .idioms__list--progress-container {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+.skills .studies .idioms .idioms__list li > div .idioms__list--progress-container .idioms__list--progress-bar {
+  background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
 }
 
 /*# sourceMappingURL=style.css.map */
