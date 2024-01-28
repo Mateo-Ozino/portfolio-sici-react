@@ -5,7 +5,7 @@ export function HardSkill ({ children, icon, className }) {
   return(
     <div className={`hard-skill ${className}`}>
       <img src={icon} alt="Project Icon" />
-      <p>{children}</p>
+      <h4>{children}</h4>
     </div>
   )
 }

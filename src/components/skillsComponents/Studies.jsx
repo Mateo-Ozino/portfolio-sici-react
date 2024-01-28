@@ -5,8 +5,10 @@ export function Studies() {
   return (
     <section className="studies">
       <h2>Education</h2>
-      <StudiesDetails />
-      <Idioms />
+      <div className="studies__container">
+        <StudiesDetails />
+        <Idioms />
+      </div>
     </section>  
   )
 }

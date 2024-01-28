@@ -1,4 +1,4 @@
-import { Progress } from "@material-tailwind/react";
+import { ProgressBar } from "./ProgressBar"
 
 export function Idioms() {
   return (
@@ -11,11 +11,11 @@ export function Idioms() {
               <h5>Native</h5>
             </div>
             <div className="idioms__list--progress-container">
-              {/* <Progress value={100} className="idioms__list--progress-bar" /> */}
-              <div className="w-full bg-gray-200 rounded-full h-2.5 idioms__list--progress-bar">
-                <div className="bg-white h-2.5 rounded-full" style={{ width: '100%' }}></div>
+              <ProgressBar progress={100} />
+              <div className="idioms__list--score">
+                <span>★</span>
+                <h4>5/5</h4>
               </div>
-              <p>★ 5/5</p>
             </div>
           </div>
         </li>
@@ -26,8 +26,11 @@ export function Idioms() {
               <h5>Fluent</h5>
             </div>
             <div className="idioms__list--progress-container">
-              <Progress value={85} className="idioms__list--progress-bar" />
-              ★ 4/5
+              <ProgressBar progress={80}/>
+              <div className="idioms__list--score">
+                <span>★</span>
+                <h4>4/5</h4>
+              </div>
             </div>  
           </div>
         </li>
@@ -38,8 +41,11 @@ export function Idioms() {
               <h5>Conversational</h5>
             </div>
             <div className="idioms__list--progress-container">
-              <Progress value={50} className="idioms__list--progress-bar" />
-              ★ 4/5
+              <ProgressBar progress={60} />
+              <div className="idioms__list--score">
+                <span>★</span>
+                <h4>3/5</h4>
+              </div>
             </div>
           </div>
         </li>

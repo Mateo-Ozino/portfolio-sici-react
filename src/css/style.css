@@ -184,8 +184,21 @@ main {
   margin-bottom: 10px;
 }
 
+.skills {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.skills .skills__hard-soft-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
 .skills .hard-skills h2 {
   font: normal 500 26px/normal "Poppins";
+  padding-bottom: 15px;
 }
 .skills .hard-skills .hard-skills__container {
   display: grid;
@@ -213,51 +226,74 @@ main {
   grid-area: 2/3/3/4;
 }
 .skills .hard-skills .hard-skills__container .hard-skill {
+  width: 160px;
   align-items: center;
   background: linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
   border-radius: 34px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  height: 199px;
   justify-content: center;
   overflow: hidden;
   padding: 20px 45px;
+  width: 160px;
 }
-.skills .hard-skills .hard-skills__container .hard-skill p {
+.skills .hard-skills .hard-skills__container .hard-skill h4 {
   text-align: center;
+  font: normal 500 18px/normal "Poppins";
 }
 .skills .soft-skills h2 {
   font: normal 500 26px/normal "Poppins";
+  padding-bottom: 15px;
 }
 .skills .soft-skills .soft-skills__list {
   list-style-image: url("../assets/gem_icon.png");
   border-radius: 34px;
   background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
-  padding: 40px 58px;
+  padding: 30px 50px 15px 50px;
 }
 .skills .soft-skills .soft-skills__list li {
   padding: 0px 0px 15px 5px;
+  font: normal 500 18px/normal "Poppins";
 }
 .skills .studies h2 {
   font: normal 500 26px/normal "Poppins";
+  padding-bottom: 15px;
+}
+.skills .studies .studies__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.skills .studies .studies-details {
+  width: 45%;
 }
 .skills .studies .studies-details .studies-details__list {
   list-style-image: url("../assets/gem_icon.png");
   border-radius: 34px;
   background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
-  padding: 40px 58px;
+  padding: 40px 50px 5px 50px;
 }
 .skills .studies .studies-details .studies-details__list li {
   padding: 0px 0px 25px 5px;
 }
+.skills .studies .studies-details .studies-details__list li h4 {
+  font: normal 500 18px/normal "Poppins";
+}
+.skills .studies .studies-details .studies-details__list li h5 {
+  font: italic 500 14px/normal "Poppins";
+}
 .skills .studies .idioms {
-  width: 80%;
+  width: 70%;
 }
 .skills .studies .idioms .idioms__list {
   list-style-image: url("../assets/gem_icon.png");
   border-radius: 34px;
   background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
-  padding: 40px 58px;
+  padding: 30px 50px 15px 50px;
 }
 .skills .studies .idioms .idioms__list li {
   padding: 0px 0px 15px 5px;
@@ -267,6 +303,12 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+.skills .studies .idioms .idioms__list li > div h4 {
+  font: normal 500 18px/normal "Poppins";
+}
+.skills .studies .idioms .idioms__list li > div h5 {
+  font: italic 500 14px/normal "Poppins";
+}
 .skills .studies .idioms .idioms__list li > div .idioms__list--progress-container {
   width: 70%;
   display: flex;
@@ -274,8 +316,67 @@ main {
   align-items: center;
   gap: 35px;
 }
+.skills .studies .idioms .idioms__list li > div .idioms__list--progress-container .idioms__list--score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.skills .studies .idioms .idioms__list li > div .idioms__list--progress-container .idioms__list--score span {
+  font-size: 18px;
+}
 .skills .studies .idioms .idioms__list li > div .idioms__list--progress-container .idioms__list--progress-bar {
   background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
+}
+
+.projects {
+  padding: 40px;
+}
+.projects .project {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.projects .project h2 {
+  font: normal 500 26px/normal "Poppins";
+}
+.projects .project p {
+  font: normal 400 18px/normal "Poppins";
+}
+.projects .project .project-card .project-card__header {
+  border-radius: 36px 36px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 17px 34px;
+  background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
+}
+.projects .project .project-card .project-card__header p {
+  font: normal 400 18px/normal "Poppins";
+}
+.projects .project .project-card .project-card__header h5 {
+  font: italic 500 14px/normal "Poppins";
+}
+.projects .project .project-card .project-card__header :first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.projects .project .project-card .project-card__header :first-child img {
+  width: 10%;
+}
+.projects .project .project-card .project-card__header :nth-child(2) {
+  display: flex;
+  gap: 8px;
+}
+.projects .project .project-card .project-card__images-container {
+  display: flex;
+}
+.projects .project .project-card .project-card__images-container :first-child img {
+  border-radius: 0px 0px 0px 36px;
+}
+.projects .project .project-card .project-card__images-container :last-child img {
+  border-radius: 0px 0px 36px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

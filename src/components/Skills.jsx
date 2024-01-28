@@ -5,8 +5,10 @@ import { Studies } from "./skillsComponents/Studies";
 export function Skills () {
   return (
     <section className="skills">
-      <HardSkills />
-      <SoftSkills />
+      <div className="skills__hard-soft-container">
+        <HardSkills />
+        <SoftSkills />
+      </div>
       <Studies />
     </section>
   )
