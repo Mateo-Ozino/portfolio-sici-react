@@ -10,5 +10,17 @@ export default defineConfig({
       plugins: [tailwindcss()],
     },
   },
-  base: '/portfolio-sici-react/'
+  esbuild: {
+    jsxInject: `import React from 'react'`,
+  },
+  base: './',
+  build: {
+    assetsDir: 'assets',
+    outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 })
