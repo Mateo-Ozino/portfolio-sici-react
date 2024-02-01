@@ -281,16 +281,18 @@ main {
 
 // PROJECT
 .projects {
-  padding: 40px;
+  padding: 40px 40px 18px 40px;
   .project {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 10px;
+    margin-bottom: 22px;
     h2 {
       font: variables.$h2;
     }
     p {
       font: variables.$p;
+      margin-bottom: 8px;
     }
     .project-card {
       .project-card__header {
@@ -310,9 +312,6 @@ main {
           display: flex;
           align-items: center;
           gap: 12px;
-          img {
-            width: 10%;
-          }
         }
         & :nth-child(2) {
           display: flex;
@@ -331,6 +330,78 @@ main {
             border-radius: 0px 0px 36px 0px;
           }
         }
+      }
+    }
+  }
+}
+
+// Contact Form
+.contact {
+  display: flex;
+  width: 100%;
+  padding: 100px 220px 100px 220px;
+  justify-content: center;
+  align-items: center;
+  .contact__container {
+    min-width: 520px;
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 36px;
+      background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%));
+      padding: 30px;
+      input {
+        border-radius: 20px;
+        border: 1px solid var(--Light, #EDE4EB);
+        background: none;
+        &:focus-visible {
+          outline: none;
+        }
+      }
+      textarea {
+        border-radius: 20px;
+        border: 1px solid var(--Light, #EDE4EB);
+        background: none;
+        &::placeholder {
+          color: white;
+        }
+        &:focus-visible {
+          outline: none;
+        }
+      }
+      select {
+        border-radius: 20px;
+        border: 1px solid var(--Light, #EDE4EB);
+        background: none;
+        option {
+          background-color: #A100B3;
+        }
+      }
+      & :nth-child(5) {
+        align-self: center;
+      }
+      button {
+        padding: 10px 60px;
+        border-radius: 40px;
+        background: var(--Dark-purple, #A100B3);
+      }
+      .form__error-message {
+        font: variables.$h6;
+        color: #FFB9B9;
+        padding-left: 10px;
+        padding-top: 10px;
+      }
+      .result {
+        align-self: center;
+        padding-top: 10px;
+        font: variables.$h4;
+      }
+      .good-result h4 {
+        color: greenyellow;
+      }
+      .bad-result h4 {
+        color: #FFB9B9;
       }
     }
   }

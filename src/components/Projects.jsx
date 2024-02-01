@@ -6,6 +6,9 @@ export function Projects() {
       <Project nombre={"Ruda Macho Rugby"} number={1}>
         Lorem ipsum dolor sit amet consectetur. Rutrum risus pellentesque ut morbi at. A amet tempor gravida risus tristique pulvinar orci id lectus. Scelerisque nunc diam nec dictumst quis amet at. Vel ipsum tempus egestas lacinia egestas.
       </Project>
+      <Project nombre={"Tinky"} number={2}>
+        Lorem ipsum dolor sit amet consectetur. Rutrum risus pellentesque ut morbi at. A amet tempor gravida risus tristique pulvinar orci id lectus. Scelerisque nunc diam nec dictumst quis amet at. Vel ipsum tempus egestas lacinia egestas.
+      </Project>
     </section>
   )
 }

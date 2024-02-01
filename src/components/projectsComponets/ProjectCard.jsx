@@ -8,12 +8,12 @@ export function ProjectCard ({ nombre }) {
     <section className="project-card">
       <header className="project-card__header">
         <div>
-          <img src={Circulo} alt="" />
+          <img src={Circulo} alt="Figura circular blanca" />
           <p>{nombre}</p>
         </div>
         <div>
           <h5>Behance</h5>
-          <span><img src={OpenNew} alt="" /></span>
+          <span><img src={OpenNew} alt="Icon that redirects to Behance" /></span>
         </div>
       </header>
       <section className="project-card__images-container">

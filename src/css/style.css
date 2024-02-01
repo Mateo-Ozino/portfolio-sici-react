@@ -330,18 +330,20 @@ main {
 }
 
 .projects {
-  padding: 40px;
+  padding: 40px 40px 18px 40px;
 }
 .projects .project {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 10px;
+  margin-bottom: 22px;
 }
 .projects .project h2 {
   font: normal 500 26px/normal "Poppins";
 }
 .projects .project p {
   font: normal 400 18px/normal "Poppins";
+  margin-bottom: 8px;
 }
 .projects .project .project-card .project-card__header {
   border-radius: 36px 36px 0px 0px;
@@ -362,9 +364,6 @@ main {
   align-items: center;
   gap: 12px;
 }
-.projects .project .project-card .project-card__header :first-child img {
-  width: 10%;
-}
 .projects .project .project-card .project-card__header :nth-child(2) {
   display: flex;
   gap: 8px;
@@ -377,6 +376,77 @@ main {
 }
 .projects .project .project-card .project-card__images-container :last-child img {
   border-radius: 0px 0px 36px 0px;
+}
+
+.contact {
+  display: flex;
+  width: 100%;
+  padding: 100px 220px 100px 220px;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contact__container {
+  min-width: 520px;
+}
+.contact .contact__container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 36px;
+  background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
+  padding: 30px;
+}
+.contact .contact__container form input {
+  border-radius: 20px;
+  border: 1px solid var(--Light, #EDE4EB);
+  background: none;
+}
+.contact .contact__container form input:focus-visible {
+  outline: none;
+}
+.contact .contact__container form textarea {
+  border-radius: 20px;
+  border: 1px solid var(--Light, #EDE4EB);
+  background: none;
+}
+.contact .contact__container form textarea::placeholder {
+  color: white;
+}
+.contact .contact__container form textarea:focus-visible {
+  outline: none;
+}
+.contact .contact__container form select {
+  border-radius: 20px;
+  border: 1px solid var(--Light, #EDE4EB);
+  background: none;
+}
+.contact .contact__container form select option {
+  background-color: #A100B3;
+}
+.contact .contact__container form :nth-child(5) {
+  align-self: center;
+}
+.contact .contact__container form button {
+  padding: 10px 60px;
+  border-radius: 40px;
+  background: var(--Dark-purple, #A100B3);
+}
+.contact .contact__container form .form__error-message {
+  font: normal 400 10px/normal "Poppins";
+  color: #FFB9B9;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.contact .contact__container form .result {
+  align-self: center;
+  padding-top: 10px;
+  font: normal 500 18px/normal "Poppins";
+}
+.contact .contact__container form .good-result h4 {
+  color: greenyellow;
+}
+.contact .contact__container form .bad-result h4 {
+  color: #FFB9B9;
 }
 
 /*# sourceMappingURL=style.css.map */
