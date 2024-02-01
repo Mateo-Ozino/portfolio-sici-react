@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 import Circulo from '../../assets/circulo.svg'
 import OpenNew from '../../assets/open_new.svg'
-import Sici from '../../assets/profile_pic.jpeg'
 
-export function ProjectCard ({ nombre }) {
+export function ProjectCard ({ nombre, image1, image2, image3, image4 }) {
   return (
     <section className="project-card">
       <header className="project-card__header">
@@ -13,14 +12,14 @@ export function ProjectCard ({ nombre }) {
         </div>
         <div>
           <h5>Behance</h5>
-          <span><img src={OpenNew} alt="Icon that redirects to Behance" /></span>
+          <span><img src={OpenNew} alt="Icono que redirecciona a Behance" /></span>
         </div>
       </header>
       <section className="project-card__images-container">
-        <figure><img src={Sici} alt="" /></figure>
-        <figure><img src={Sici} alt="" /></figure>
-        <figure><img src={Sici} alt="" /></figure>
-        <figure><img src={Sici} alt="" /></figure>
+        <figure><img src={image1} alt="" /></figure>
+        <figure><img src={image2} alt="" /></figure>
+        <figure><img src={image3} alt="" /></figure>
+        <figure><img src={image4} alt="" /></figure>
       </section>
     </section>
   )
@@ -28,4 +27,8 @@ export function ProjectCard ({ nombre }) {
 
 ProjectCard.propTypes = {
   nombre: PropTypes.string,
+  image1: PropTypes.string,
+  image2: PropTypes.string,
+  image3: PropTypes.string,
+  image4: PropTypes.string
 };

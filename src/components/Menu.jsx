@@ -1,23 +1,38 @@
 import { NavLink } from 'react-router-dom'
 import  BanderaUsa from '../assets/USA-bandera.png'
 import BanderaEspaña from '../assets/Espana-bandera.png'
+import { useTranslation } from 'react-i18next'
 
 export function Menu() {
+  const { t, i18n } = useTranslation()
+
   return(
     <section className="menu">
-      <h1 className="menu__title">My <br /> Portfolio</h1>
+      <h1 className="menu__title">{t("generalTitle1")} <br /> {t("generalTitle2")}</h1>
       <nav className="menu__navbar">
-        <li><NavLink to="/">About me</NavLink></li>
-        <li><NavLink to="/skills">Skills</NavLink></li>
-        <li><NavLink to="/projects">Projects</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
+        <li><NavLink to="/">{t("menu1")}</NavLink></li>
+        <li><NavLink to="/skills">{t("menu2")}</NavLink></li>
+        <li><NavLink to="/projects">{t("menu3")}</NavLink></li>
+        <li><NavLink to="/contact">{t("menu4")}</NavLink></li>
       </nav>
       <section className="menu__credits">
-        <p>Designed by Sicilia Arito, Developed by Mateo Ozino. All rights reserved © 2023.</p>
+        <p>{t("credits")}</p>
         <div>
-          <img src={BanderaUsa} alt="Bandera de Estados Unidos" />
+          <button 
+            type='submit'
+            onClick={() => i18n.changeLanguage('en')} 
+            disabled={i18n.resolvedLanguage === 'en'}
+            >
+            <img src={BanderaUsa} alt="Bandera de Estados Unidos" />
+          </button>
           <p>|</p>
-          <img src={BanderaEspaña} alt="Bandera de España" />
+          <button
+          type='submit'
+          onClick={() => i18n.changeLanguage('es')} 
+          disabled={i18n.resolvedLanguage === 'es'}
+          >
+            <img src={BanderaEspaña} alt="Bandera de España" />
+          </button>
         </div>
       </section>
     </section>
