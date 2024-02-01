@@ -15,7 +15,9 @@ export function Menu() {
         <li><NavLink to="/projects">{t("menu3")}</NavLink></li>
         <li><NavLink to="/contact">{t("menu4")}</NavLink></li>
       </nav>
-      <section className="menu__credits">
+      <section 
+        className={"menu__credits " + (i18n.resolvedLanguage === 'es' ? "larger-text" : "")}
+        >
         <p>{t("credits")}</p>
         <div>
           <button 

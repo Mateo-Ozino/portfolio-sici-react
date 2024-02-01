@@ -132,6 +132,9 @@ main {
 .menu__credits div img {
   width: 20px;
 }
+.menu .larger-text {
+  max-width: 35ch;
+}
 
 .active {
   border-radius: 0px 40px 40px 0px;
@@ -185,6 +188,7 @@ main {
 }
 
 .skills {
+  width: 100%;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -381,12 +385,13 @@ main {
 .contact {
   display: flex;
   width: 100%;
-  padding: 100px 220px 100px 220px;
+  height: 100dvh;
+  padding: 20px 0 20px 0;
   justify-content: center;
   align-items: center;
 }
 .contact .contact__container {
-  min-width: 520px;
+  min-width: 600px;
 }
 .contact .contact__container form {
   display: flex;
