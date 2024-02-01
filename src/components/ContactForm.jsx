@@ -1,8 +1,11 @@
 import { useForm } from 'react-hook-form'
 import emailjs from '@emailjs/browser';
 import { useEffect, useState } from 'react';
+import { useTranslation } from "react-i18next"
 
 export function ContactForm() {
+  const { t } = useTranslation()
+
   useEffect(() => emailjs.init("FEOmaTiiwV3PxIHAW"), []);
 
   const [contactResult, setContactResult] = useState(false)
@@ -30,7 +33,7 @@ export function ContactForm() {
     } finally {
       reset()
       setContactResult(true)
-      setContactSuccess("Correo enviado exitosamente")
+      setContactSuccess(t("contactSuccess"))
     }
   })
 
@@ -40,7 +43,7 @@ export function ContactForm() {
         <form onSubmit={e => e.preventDefault()}>
           <div className="mb-5">
             <label htmlFor="name" className="mb-3 block">
-              Name and Last Name
+              {t("nameLabel")}
             </label>
             <input
               type="text"
@@ -50,11 +53,11 @@ export function ContactForm() {
               {...register("name", {
                 required: {
                   value: true,
-                  message: "This field is required",
+                  message: t("fieldRequired"),
                 },
                 pattern: {
                   value: expresiones.nombre,
-                  message: "The content is incorrect"
+                  message: t("fieldIncorrect")
                 }
               })}
             />
@@ -62,7 +65,7 @@ export function ContactForm() {
           </div>
           <div className="mb-5">
             <label htmlFor="email" className="mb-3 block">
-              E-mail
+            {t("emailLabel")}
             </label>
             <input
               type="email"
@@ -72,18 +75,20 @@ export function ContactForm() {
               {...register("email", {
                 required: {
                   value: true,
-                  message: "This field is required",
+                  message: t("fieldRequired"),
                 },
                 pattern: {
                   value: expresiones.mail,
-                  message: "The content is incorrect"
+                  message: t("fieldIncorrect")
                 }
               })}
             />
             <p className='form__error-message'>{errors.email?.message}</p>
           </div>
           <div className="mb-5 prueba">
-            <label htmlFor="reason" className="block mb-3">Reason for contact:</label>
+            <label htmlFor="reason" className="block mb-3">
+              {t("reasonLabel")}
+            </label>
             <select 
             id="reason" 
             className="w-full py-3 px-6"
@@ -91,34 +96,34 @@ export function ContactForm() {
             {...register("reason", {
               required: {
                 value: true,
-                message: "This field is required",
+                message: t("fieldRequired"),
               },
             })}
             >
-              <option value="default" disabled>Choose your reason for contacting</option>
-              <option value="project">Project</option>
-              <option value="info">Info</option>
-              <option value="other">Other</option>
+              <option value="default" disabled>{t("optionDefault")}</option>
+              <option value="project">{t("option1")}</option>
+              <option value="info">{t("option2")}</option>
+              <option value="other">{t("option3")}</option>
             </select>
             <p className='form__error-message'>{errors.reason?.message}</p>
           </div>
           <div className="mb-5">
             <label htmlFor="message" className="mb-3 block">
-              Message
+              {t("textareaLabel")}
             </label>
             <textarea
               rows="4"
               name="message"
               id="message"
-              placeholder="Write your message here."
+              placeholder={t("textareaPlaceholder")}
               className="w-full resize-none py-3 px-6"
               {...register("message", {
                 required: {
                   value: true,
-                  message: "This field is required",
+                  message: t("fieldRequired"),
                   pattern: {
                     value: expresiones.mensaje,
-                    message: "The content is incorrect"
+                    message: t("fieldIncorrect")
                   }
                 },
               })}
@@ -128,7 +133,7 @@ export function ContactForm() {
           </div>
           <div>
             <button className="py-3 px-8" onClick={onSubmit}>
-              Enviar
+              {t("submitButton")}
             </button>
           </div>
           <div className={"result " + (contactResult ? "good-result" : "bad-result")}>

@@ -1,7 +1,10 @@
 import { Project } from "./projectsComponets/Project"
 import Sici from "../assets/profile_pic.jpeg"
+import { useTranslation } from 'react-i18next'
 
 export function Projects() {
+  const { t } = useTranslation()
+
   return (
     <section className="projects">
       <Project 
@@ -12,7 +15,7 @@ export function Projects() {
         image3={Sici} 
         image4={Sici}
         >
-        Lorem ipsum dolor sit amet consectetur. Rutrum risus pellentesque ut morbi at. A amet tempor gravida risus tristique pulvinar orci id lectus. Scelerisque nunc diam nec dictumst quis amet at. Vel ipsum tempus egestas lacinia egestas.
+        {t("projectContent1")}
       </Project>
       <Project 
         nombre={"Tinky"} 
@@ -22,7 +25,7 @@ export function Projects() {
         image3={Sici} 
         image4={Sici}
         >
-        Lorem ipsum dolor sit amet consectetur. Rutrum risus pellentesque ut morbi at. A amet tempor gravida risus tristique pulvinar orci id lectus. Scelerisque nunc diam nec dictumst quis amet at. Vel ipsum tempus egestas lacinia egestas.
+        {t("projectContent1")}
       </Project>
     </section>
   )

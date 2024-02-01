@@ -8,7 +8,7 @@ export function Menu() {
 
   return(
     <section className="menu">
-      <h1 className="menu__title">{t("generalTitle1")} <br /> {t("generalTitle2")}</h1>
+      <h1 className="menu__title">{t("generalTitle")}</h1>
       <nav className="menu__navbar">
         <li><NavLink to="/">{t("menu1")}</NavLink></li>
         <li><NavLink to="/skills">{t("menu2")}</NavLink></li>
@@ -29,9 +29,9 @@ export function Menu() {
           </button>
           <p>|</p>
           <button
-          type='submit'
-          onClick={() => i18n.changeLanguage('es')} 
-          disabled={i18n.resolvedLanguage === 'es'}
+            type='submit'
+            onClick={() => i18n.changeLanguage('es')} 
+            disabled={i18n.resolvedLanguage === 'es'}
           >
             <img src={BanderaEspaña} alt="Bandera de España" />
           </button>

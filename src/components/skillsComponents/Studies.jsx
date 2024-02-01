@@ -1,6 +1,7 @@
 import { StudiesDetails } from "./studiesComponents/StudiesDetails";
 import { Idioms } from "./studiesComponents/Idioms";
 
+
 export function Studies() {
   return (
     <section className="studies">
