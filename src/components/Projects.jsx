@@ -1,32 +1,22 @@
 import { Project } from "./projectsComponets/Project"
-import Sici from "../assets/profile_pic.jpeg"
-import { useTranslation } from 'react-i18next'
+//import { useTranslation } from 'react-i18next'
+import { projects } from "../data/data"
 
 export function Projects() {
-  const { t } = useTranslation()
+  // const { t } = useTranslation()
 
   return (
     <section className="projects">
-      <Project 
-        nombre={"Ruda Macho Rugby"} 
-        number={1} 
-        image1={Sici} 
-        image2={Sici} 
-        image3={Sici} 
-        image4={Sici}
-        >
-        {t("projectContent1")}
-      </Project>
-      <Project 
-        nombre={"Tinky"} 
-        number={2} 
-        image1={Sici} 
-        image2={Sici} 
-        image3={Sici} 
-        image4={Sici}
-        >
-        {t("projectContent1")}
-      </Project>
+      {
+        projects.map(project => {
+          const { id, name, details, images } = project
+          return (
+            <Project key={`${Math.floor(Math.random() * 100)}-${id}`} number={id} projectName={name} projectImages={images}>
+              {details}
+            </Project>
+          )
+        })
+      }
     </section>
   )
 }
