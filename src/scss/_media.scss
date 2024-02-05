@@ -2,14 +2,177 @@
   .menu {
     justify-content: space-evenly;
     .menu__navbar > li > a {
-      padding: 20px 60px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  .contact {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1271px) {
+  .skills {
+    padding: 30px;
+    .skills__hard-soft-container {
+      flex-direction: column;
+      .hard-skills {
+        width: 90%;
+        .hard-skill {
+          width: 100%;
+        }
+      }
+      .soft-skills {
+        width: 90%;
+      }
+    }
+    .studies {
+      h2 {
+        padding-left: 33px;
+      }
+      .studies__container {
+        flex-direction: column;
+        width: 100%;
+        .studies-details {
+          width: 90%;
+        }
+        .idioms {
+          width: 90%;
+        }
+      }
     }
   }
 }
 
-
 @media screen and (max-width: 1024px) {
-  .about > article {
-    flex-direction: column;
+  .about {
+    > article {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+  .skills {
+    padding: 40px 20px;
+    .skills__hard-soft-container {
+      .hard-skills {
+        width: 100%;
+        .hard-skill {
+          width: 100%;
+          h4 {
+            padding: 0px 10px 0px 10px;
+          }
+        }
+      }
+      .soft-skills {
+        width: 100%;
+      }
+    }
+    .studies {
+      .studies__container {
+        .studies-details {
+          width: 100%;
+        }
+        .idioms {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .menu__title {
+    padding-left: 30px;
+  }
+  .menu__navbar {
+    li {
+      a { 
+        width: 85%;
+        padding: 20px 40px;
+      }
+    }
+  }
+  .menu__credits {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .active {
+    text-decoration: underline 2px;
+    text-underline-offset: 8px;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    text-align: start;
+  }
+  aside {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .menu {
+      padding-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 2fr 0.5fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 5px;
+      &__title {
+        white-space: normal;
+      }
+    }
+  }
+  main {
+    width: 100%;
+  }
+  .skills {
+    .skills__hard-soft-container {
+      .hard-skills {
+        .hard-skill {
+          height: 150px;
+          img {
+            width: 60px;
+          }
+          h4 {
+            font: variables.$mobile-h4;
+          }
+        }
+      }
+    }
+    .studies {
+      .studies__container {
+        .idioms {
+          .idioms__list {
+            li > div {
+              .idioms__list--progress-container {
+                width: 60%;
+                .idioms__list--progress-bar {
+                  height: 5px;
+                }
+                > div > div {
+                  height: 5px;
+                }
+              }
+            }
+            li > div > div{
+              h4 {
+                font: variables.$mobile-h4;
+              }
+              h5 {
+                font: variables.$mobile-h5;
+              }
+            }
+          }
+        }
+      }
+      h2 {
+        padding-left: 0;
+      }
+    }
+  }
+  .contact {
+    .contact__container {
+      min-width: 0;
+      width: 90%;
+    }
   }
 }

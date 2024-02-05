@@ -1,7 +1,6 @@
 @use 'reset';
 @use 'variables';
 @use 'mixins';
-@use 'media';
 
 @tailwind base;
 @tailwind components;
@@ -13,6 +12,16 @@ body {
   background-image: url('../assets/HOME\ -\ ABOUT\ ME.png');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+// GENERAL PURPOSE
+.responsive-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px 0px 30px;
+  svg {
+    width: 30px;
+  }
 }
 
 .mainContainer {
@@ -31,7 +40,20 @@ main {
   overflow: hidden auto;
 }
 
+.hidden {
+  display: none
+}
+
 // MENU STYLES
+.active {
+  border-radius: 0px 40px 40px 0px;
+  background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%));
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.20);
+  backdrop-filter: blur(20px);
+  text-align: center;
+  transition: box-shadow ease-in 0.15s;
+}
+
 .menu {
   width: 100%;
   height: 100%;
@@ -41,10 +63,19 @@ main {
   gap: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
+  &__responsive {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+    button {
+      svg {
+        width: 30px;
+      }
+    }
+  }
   &__title {
     padding-left: 40px;
     margin: 0;
-    font: variables.$h1;
     white-space: pre-line;
   }
   &__navbar {
@@ -60,14 +91,11 @@ main {
   }
   &__navbar > li > a {
     width: 300px;
-    text-decoration: none;
     color: white;
-    font: variables.$h4;
     padding: 30px 60px;
   }
   &__credits {
     max-width: 31ch;
-    font: variables.$h5;
     padding: 0px 40px;
     display: flex;
     flex-direction: column;
@@ -95,15 +123,6 @@ main {
   }
 }
 
-.active {
-  border-radius: 0px 40px 40px 0px;
-  background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%));
-  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.20);
-  backdrop-filter: blur(20px);
-  text-align: center;
-  transition: box-shadow ease-in 0.15s;
-}
-
 //ABOUT STYLES
 .about {
   display: flex;
@@ -120,7 +139,6 @@ main {
     background-repeat: no-repeat;
   }
   &__name {
-    font: variables.$h2;
     margin: 24px 0 0 0;
   }
   &__subtitle {
@@ -130,14 +148,14 @@ main {
   }
   > article {
     display: flex;
+    flex-direction: row;
     gap: 80px;
     > div {
       > h3 {
-        font: variables.$h3;
         margin-bottom: 20px;
       }
       > p {
-        font: variables.$p;
+        
         line-height: 27px;
         margin: 0;
         > span {
@@ -163,7 +181,6 @@ main {
   }
   .hard-skills { 
     h2 {
-      font: variables.$h2;
       padding-bottom: 15px;
     }
     .hard-skills__container {
@@ -192,7 +209,6 @@ main {
         width: 160px;
         h4 {
           text-align: center;
-          font: variables.$h4;
         }
       }
     }  
@@ -200,7 +216,6 @@ main {
   .soft-skills {
     width: 100%;
     h2 {
-      font: variables.$h2;
       padding-bottom: 15px;
     }
     .soft-skills__list {
@@ -208,13 +223,11 @@ main {
       padding: 30px 50px 15px 50px;
       li {
         padding: 0px 0px 15px 5px;
-        font: variables.$h4;
       }
     }
   }
   .studies {
     h2 {
-      font: variables.$h2;
       padding-bottom: 15px;
     }
     .studies__container {
@@ -231,11 +244,7 @@ main {
         padding: 40px 50px 5px 50px;
         li {
           padding: 0px 0px 25px 5px;
-          h4 {
-            font: variables.$h4;
-          }
           h5 {
-            font: variables.$h5;
             white-space: pre-line;
           }
         }
@@ -252,12 +261,6 @@ main {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            h4 {
-              font: variables.$h4;
-            }
-            h5 {
-              font: variables.$h5;
-            }
             .idioms__list--progress-container {
               width: 70%;
               display: flex;
@@ -292,11 +295,7 @@ main {
     flex-direction: column;
     gap: 10px;
     margin-bottom: 22px;
-    h2 {
-      font: variables.$h2;
-    }
     p {
-      font: variables.$p;
       margin-bottom: 8px;
     }
     .project-card {
@@ -307,12 +306,8 @@ main {
         justify-content: space-between;
         padding: 17px 34px;
         background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%));
-        p {
-          font: variables.$p;
+        p { 
           margin: 0;
-        }
-        h5 {
-          font: variables.$h5;
         }
         & :first-child {
           display: flex;
@@ -345,7 +340,6 @@ main {
 .contact {
   display: flex;
   width: 100%;
-  height: 100%;
   padding: 25px 0 25px 0;
   justify-content: center;
   align-items: center;
@@ -360,7 +354,7 @@ main {
       padding: 30px;
       input {
         border-radius: 20px;
-        border: 1px solid var(--Light, #EDE4EB);
+        border: 1px solid var(--Light, variables.$white);
         background: none;
         &:focus-visible {
           outline: none;
@@ -368,7 +362,7 @@ main {
       }
       textarea {
         border-radius: 20px;
-        border: 1px solid var(--Light, #EDE4EB);
+        border: 1px solid var(--Light, variables.$white);
         background: none;
         &::placeholder {
           color: white;
@@ -379,10 +373,10 @@ main {
       }
       select {
         border-radius: 20px;
-        border: 1px solid var(--Light, #EDE4EB);
+        border: 1px solid var(--Light, variables.$white);
         background: none;
         option {
-          background-color: #A100B3;
+          background-color: variables.$dark_purple;
         }
       }
       & :nth-child(5) {
@@ -391,25 +385,41 @@ main {
       button {
         padding: 10px 60px;
         border-radius: 40px;
-        background: var(--Dark-purple, #A100B3);
+        background: var(--Dark-purple, variables.$dark_purple);
       }
       .form__error-message {
-        font: variables.$h6;
-        color: #FFB9B9;
+        color: variables.$red;
         padding-left: 10px;
         padding-top: 10px;
       }
       .result {
         align-self: center;
         padding-top: 10px;
-        font: variables.$h4;
       }
       .good-result h4 {
         color: greenyellow;
       }
       .bad-result h4 {
-        color: #FFB9B9;
+        color: variables.$red;
       }
     }
   }
 }
+
+$fonts: variables.$h1, variables.$h2, variables.$h3, variables.$h4, variables.$h5, variables.$h6;
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font: nth($fonts, $i)
+  }
+}
+
+p {
+  font: variables.$p
+}
+
+.menu__navbar > li > a {
+  font: variables.$h4
+}
+
+@import 'media';
