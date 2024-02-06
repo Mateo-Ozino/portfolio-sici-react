@@ -26,7 +26,7 @@ body {
 
 .mainContainer {
   @include mixins.flex-row(space-between, flex-start, 0);
-  height: 100vh;
+  height: 100dvh;
 }
 
 aside {
