@@ -56,7 +56,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   gap: 0;
-  height: 100vh;
+  height: 100dvh;
 }
 
 aside {
@@ -546,6 +546,30 @@ p {
   }
 }
 @media screen and (max-width: 768px) {
+  h1 {
+    font: normal 600 24px/normal "Poppins";
+  }
+  h2 {
+    font: normal 500 20px/normal "Poppins";
+  }
+  h3 {
+    font: normal 500 16px/normal "Poppins";
+  }
+  h4 {
+    font: normal 500 14px/normal "Poppins";
+  }
+  h5 {
+    font: italic 500 12px/normal "Poppins";
+  }
+  h6 {
+    font: normal 400 12px/normal "Poppins";
+  }
+  p {
+    font: normal 400 14px/normal "Poppins";
+  }
+  .menu__navbar > li > a {
+    font: normal 500 14px/normal "Poppins";
+  }
   .active {
     text-decoration: underline 2px;
     text-underline-offset: 8px;
@@ -605,6 +629,9 @@ p {
   .contact .contact__container {
     min-width: 0;
     width: 90%;
+  }
+  .contact .contact__container form div label {
+    font: normal 500 14px/normal "Poppins";
   }
 }
 

@@ -29,6 +29,7 @@ export function Menu({ isNavHidden, handleNav }) {
     };
   }, []);
 
+
   return(
     <aside className={isNavHidden ? "hidden" : ""} style={anchoComponente > 768 ? {display: "flex"} : {}}>
       <section className="menu">
@@ -36,12 +37,23 @@ export function Menu({ isNavHidden, handleNav }) {
           <h1 className="menu__title">{t("generalTitle")}</h1>
           {!isNavHidden ? <button onClick={handleNav}><IoClose /></button> : ""}
         </div>
-        <nav className="menu__navbar">
-          <li onClick={handleNav}><NavLink to="/">{t("menu1")}</NavLink></li>
-          <li onClick={handleNav}><NavLink to="/skills">{t("menu2")}</NavLink></li>
-          <li onClick={handleNav}><NavLink to="/projects">{t("menu3")}</NavLink></li>
-          <li onClick={handleNav}><NavLink to="/contact">{t("menu4")}</NavLink></li>
-        </nav>
+          {
+            anchoComponente > 768 ? (
+              <nav className="menu__navbar">
+                <li ><NavLink to="/">{t("menu1")}</NavLink></li>
+                <li ><NavLink to="/skills">{t("menu2")}</NavLink></li>
+                <li ><NavLink to="/projects">{t("menu3")}</NavLink></li>
+                <li ><NavLink to="/contact">{t("menu4")}</NavLink></li>
+              </nav>
+            ) : (
+            <nav className="menu__navbar">
+              <li onClick={handleNav}><NavLink to="/">{t("menu1")}</NavLink></li>
+              <li onClick={handleNav}><NavLink to="/skills">{t("menu2")}</NavLink></li>
+              <li onClick={handleNav}><NavLink to="/projects">{t("menu3")}</NavLink></li>
+              <li onClick={handleNav}><NavLink to="/contact">{t("menu4")}</NavLink></li>
+            </nav>
+            )
+          }
         <section 
           className={"menu__credits " + (i18n.resolvedLanguage === 'es' ? "larger-text" : "")}
           >

@@ -94,7 +94,21 @@
   }
 }
 
+$fonts: variables.$mobile-h1, variables.$mobile-h2, variables.$mobile-h3, variables.$mobile-h4, variables.$mobile-h5, variables.$mobile-h6;
 @media screen and (max-width: 768px) {
+  @for $i from 1 through 6 {
+    h#{$i} {
+      font: nth($fonts, $i)
+    }
+  }
+  
+  p {
+    font: variables.$mobile-p
+  }
+  
+  .menu__navbar > li > a {
+    font: variables.$mobile-h4
+  }
   .active {
     text-decoration: underline 2px;
     text-underline-offset: 8px;
@@ -173,6 +187,13 @@
     .contact__container {
       min-width: 0;
       width: 90%;
+      form {
+        div {
+          label {
+            font: variables.$mobile-h4;
+          }
+        }
+      }
     }
   }
 }
