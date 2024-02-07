@@ -8,6 +8,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+// BACKGROUND
 body {
   background-image: url('../assets/HOME\ -\ ABOUT\ ME.png');
   background-size: cover;
@@ -27,16 +28,17 @@ body {
 .mainContainer {
   @include mixins.flex-row(space-between, flex-start, 0);
   height: 100dvh;
+  overflow: hidden;
 }
 
 aside {
   width: 35%;
-  height: 100%;
+  height: 100dvh;
 }
 
 main {
   width: 100%;
-  height: 100%;
+  height: 100dvh;
   overflow: hidden auto;
 }
 
@@ -66,7 +68,8 @@ main {
   &__responsive {
     display: flex;
     justify-content: space-between;
-    padding-right: 30px;
+    align-items: center;
+    padding-right: 20px;
     button {
       svg {
         width: 30px;
@@ -130,21 +133,33 @@ main {
   justify-content: flex-start;
   align-items: center;
   padding: 40px 40px 60px 40px;
-  &__image {
-    width: 200px;
-    height: 200px;
-    border-radius: 200px;
-    background: url('../assets/profile_pic.jpeg'), lightgray 50% ;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  &__name {
-    margin: 24px 0 0 0;
-  }
-  &__subtitle {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 40px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    .about__image {
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+      background: url('../assets/profile_pic.jpeg'), lightgray 50% ;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    & :last-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .about__name {
+        margin: 24px 0 0 0;
+      }
+      .about__subtitle {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 40px;
+      }
+    }
   }
   > article {
     display: flex;
@@ -304,8 +319,12 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         padding: 17px 34px;
         background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%));
+        div > img {
+          width: 26px;
+        }
         p { 
           margin: 0;
         }
@@ -352,7 +371,11 @@ main {
       border-radius: 36px;
       background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%));
       padding: 30px;
+      label {
+        font: variables.$h4;
+      }
       input {
+        font: variables.$p;
         border-radius: 20px;
         border: 1px solid var(--Light, variables.$white);
         background: none;
@@ -375,9 +398,17 @@ main {
         border-radius: 20px;
         border: 1px solid var(--Light, variables.$white);
         background: none;
+        font: variables.$p;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url('../assets/Keyboard_arrow_down.svg') no-repeat right center;
         option {
           background-color: variables.$dark_purple;
         }
+      }
+      textarea::placeholder {
+        font: variables.$p;
       }
       & :nth-child(5) {
         align-self: center;

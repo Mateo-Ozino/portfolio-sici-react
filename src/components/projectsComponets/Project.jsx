@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { ProjectCard } from "./ProjectCard"
 import { useTranslation } from 'react-i18next'
 
-export function Project({ children, number, projectName, projectImages }) {
+export function Project({ children, number, projectName, projectImages, projectLogo }) {
   const { t } = useTranslation()
   
   return (
@@ -12,6 +12,7 @@ export function Project({ children, number, projectName, projectImages }) {
       <ProjectCard 
         projectName={projectName}
         projectImages={projectImages}
+        projectLogo={projectLogo}
         />
     </article>
   )
@@ -21,5 +22,6 @@ Project.propTypes = {
   children: PropTypes.string,
   number: PropTypes.number,
   projectName: PropTypes.string,
-  projectImages: PropTypes.array
+  projectImages: PropTypes.array,
+  projectLogo: PropTypes.string
 };

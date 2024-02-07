@@ -57,16 +57,17 @@ body {
   align-items: flex-start;
   gap: 0;
   height: 100dvh;
+  overflow: hidden;
 }
 
 aside {
   width: 35%;
-  height: 100%;
+  height: 100dvh;
 }
 
 main {
   width: 100%;
-  height: 100%;
+  height: 100dvh;
   overflow: hidden auto;
 }
 
@@ -96,7 +97,8 @@ main {
 .menu__responsive {
   display: flex;
   justify-content: space-between;
-  padding-right: 30px;
+  align-items: center;
+  padding-right: 20px;
 }
 .menu__responsive button svg {
   width: 30px;
@@ -157,7 +159,13 @@ main {
   align-items: center;
   padding: 40px 40px 60px 40px;
 }
-.about__image {
+.about > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.about > div .about__image {
   width: 200px;
   height: 200px;
   border-radius: 200px;
@@ -165,10 +173,16 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.about__name {
+.about > div :last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about > div :last-child .about__name {
   margin: 24px 0 0 0;
 }
-.about__subtitle {
+.about > div :last-child .about__subtitle {
   text-align: center;
   margin-top: 0;
   margin-bottom: 40px;
@@ -340,8 +354,12 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 17px 34px;
   background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
+}
+.projects .project .project-card .project-card__header div > img {
+  width: 26px;
 }
 .projects .project .project-card .project-card__header p {
   margin: 0;
@@ -383,7 +401,11 @@ main {
   background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
   padding: 30px;
 }
+.contact .contact__container form label {
+  font: normal 500 18px/normal "Poppins";
+}
 .contact .contact__container form input {
+  font: normal 400 18px/normal "Poppins";
   border-radius: 20px;
   border: 1px solid var(--Light, #EDE4EB);
   background: none;
@@ -406,9 +428,17 @@ main {
   border-radius: 20px;
   border: 1px solid var(--Light, #EDE4EB);
   background: none;
+  font: normal 400 18px/normal "Poppins";
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../assets/Keyboard_arrow_down.svg") no-repeat right center;
 }
 .contact .contact__container form select option {
   background-color: #A100B3;
+}
+.contact .contact__container form textarea::placeholder {
+  font: normal 400 18px/normal "Poppins";
 }
 .contact .contact__container form :nth-child(5) {
   align-self: center;
@@ -544,6 +574,10 @@ p {
   .menu__credits {
     padding: 0 30px;
   }
+  .contact > .contact__container {
+    min-width: 0;
+    width: 90%;
+  }
 }
 @media screen and (max-width: 768px) {
   h1 {
@@ -567,8 +601,8 @@ p {
   p {
     font: normal 400 14px/normal "Poppins";
   }
-  .menu__navbar > li > a {
-    font: normal 500 14px/normal "Poppins";
+  .responsive-nav {
+    padding: 26px 20px;
   }
   .active {
     text-decoration: underline 2px;
@@ -586,18 +620,53 @@ p {
     align-items: center;
   }
   aside .menu {
-    padding-top: 30px;
+    padding-top: 26px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 2fr 0.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 5px;
   }
-  aside .menu__title {
+  aside .menu .menu__title {
     white-space: normal;
+    padding-left: 20px;
+  }
+  aside .menu .menu__navbar > li > a {
+    font: normal 500 20px/normal "Poppins";
+    padding: 20px 20px;
+  }
+  aside .menu .menu__credits {
+    padding: 0 20px;
   }
   main {
     width: 100%;
+  }
+  .about {
+    padding: 10px 20px 40px 20px;
+  }
+  .about > div {
+    align-self: flex-start;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .about > div .about__image {
+    width: 117px;
+    height: 117px;
+  }
+  .about > div :last-child .about__name {
+    align-self: flex-start;
+    margin: 0;
+  }
+  .about > div :last-child .about__subtitle {
+    align-self: flex-start;
+    margin: 0;
+  }
+  .skills {
+    gap: 40px;
+    padding: 10px 19px 40px 19px;
+  }
+  .skills .skills__hard-soft-container {
+    gap: 40px;
   }
   .skills .skills__hard-soft-container .hard-skills .hard-skill {
     height: 150px;
@@ -608,14 +677,27 @@ p {
   .skills .skills__hard-soft-container .hard-skills .hard-skill h4 {
     font: normal 500 14px/normal "Poppins";
   }
+  .skills .studies .studies__container {
+    gap: 14px;
+  }
+  .skills .studies .studies__container .idioms .idioms__list {
+    padding: 32px 20px 32px 45px;
+  }
+  .skills .studies .studies__container .idioms .idioms__list :last-child {
+    padding-bottom: 0;
+  }
   .skills .studies .studies__container .idioms .idioms__list li > div .idioms__list--progress-container {
-    width: 60%;
+    width: 145px;
+    gap: 20px;
   }
   .skills .studies .studies__container .idioms .idioms__list li > div .idioms__list--progress-container .idioms__list--progress-bar {
     height: 5px;
   }
   .skills .studies .studies__container .idioms .idioms__list li > div .idioms__list--progress-container > div > div {
     height: 5px;
+  }
+  .skills .studies .studies__container .idioms .idioms__list li > div .idioms__list--progress-container .idioms__list--score span {
+    font-size: 14px;
   }
   .skills .studies .studies__container .idioms .idioms__list li > div > div h4 {
     font: normal 500 14px/normal "Poppins";
@@ -626,12 +708,48 @@ p {
   .skills .studies h2 {
     padding-left: 0;
   }
+  .projects {
+    padding: 10px 20px 40px 20px;
+  }
+  .projects .project {
+    margin-bottom: 30px;
+    gap: 18px;
+  }
+  .projects .project .project-card .project-card__header {
+    border-radius: 25px 25px 0px 0px;
+    padding: 17px 30px;
+  }
+  .projects .project .project-card .project-card__header :first-child > img {
+    width: 20px;
+  }
+  .projects .project .project-card .project-card__images-container :nth-child(n+4) {
+    display: none;
+  }
+  .projects .project .project-card .project-card__images-container :nth-child(3) > img {
+    border-radius: 0px 0px 25px 0px;
+  }
+  .projects .project .project-card .project-card__images-container :nth-child(1) > img {
+    border-radius: 0px 0px 0px 25px;
+  }
+  .projects :last-child {
+    margin-bottom: 0;
+  }
   .contact .contact__container {
     min-width: 0;
     width: 90%;
   }
   .contact .contact__container form div label {
     font: normal 500 14px/normal "Poppins";
+  }
+  .contact .contact__container form div input {
+    font: normal 400 14px/normal "Poppins";
+  }
+  .contact .contact__container form div select {
+    font: normal 400 14px/normal "Poppins";
+    padding: 12px 16px;
+  }
+  .contact .contact__container form div textarea::placeholder {
+    font: normal 400 14px/normal "Poppins";
   }
 }
 

@@ -1,9 +1,7 @@
 import PropTypes from "prop-types";
-import Circulo from '../../assets/circulo.svg'
 import OpenNew from '../../assets/open_new.svg'
-//import { useRef, useEffect, useState } from 'react'
 
-export function ProjectCard ({ projectName, projectImages }) {
+export function ProjectCard ({ projectName, projectImages, projectLogo }) {
   // const imageContainerRef = useRef(null);
 
   // const [containerWidth, setContainerWidth] = useState(0)
@@ -27,7 +25,7 @@ export function ProjectCard ({ projectName, projectImages }) {
     <section className="project-card">
       <header className="project-card__header">
         <div>
-          <img src={Circulo} alt="Figura circular blanca" />
+          <img src={projectLogo} alt="Figura circular blanca" />
           <p>{projectName}</p>
         </div>
         <div>
@@ -50,5 +48,6 @@ export function ProjectCard ({ projectName, projectImages }) {
 
 ProjectCard.propTypes = {
   projectName: PropTypes.string,
-  projectImages: PropTypes.array
+  projectImages: PropTypes.array,
+  projectLogo: PropTypes.string
 };

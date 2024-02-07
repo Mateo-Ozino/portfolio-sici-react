@@ -7,8 +7,11 @@ import { Projects } from './components/Projects'
 import { ContactForm } from './components/ContactForm'
 import { IoMdMenu } from "react-icons/io";
 import { useState , useEffect} from 'react';
+import { useTranslation } from "react-i18next"
 
 function App() {
+  const { t } = useTranslation()
+
   const [isNavHidden, setIsNavHidden] = useState(true)
   const [anchoComponente, setAnchoComponente] = useState(0);
 
@@ -39,7 +42,7 @@ function App() {
       <Menu isNavHidden={isNavHidden} handleNav={handleNav}/>
       <main style={isNavHidden ? {width: "100%"} : {width: "0%"}}>
         <section className={`responsive-nav ${isNavHidden ? "" : "hidden"}`} style={anchoComponente < 768 ? {display: "flex"} : {display: "none"}}>
-          <h1>My Portfolio</h1>
+          <h1>{t("generalTitle")}</h1>
           <button onClick={handleNav}><IoMdMenu /></button>
         </section>
         <Routes>

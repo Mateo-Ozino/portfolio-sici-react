@@ -40,10 +40,10 @@ export function Menu({ isNavHidden, handleNav }) {
           {
             anchoComponente > 768 ? (
               <nav className="menu__navbar">
-                <li ><NavLink to="/">{t("menu1")}</NavLink></li>
-                <li ><NavLink to="/skills">{t("menu2")}</NavLink></li>
-                <li ><NavLink to="/projects">{t("menu3")}</NavLink></li>
-                <li ><NavLink to="/contact">{t("menu4")}</NavLink></li>
+                <li><NavLink to="/">{t("menu1")}</NavLink></li>
+                <li><NavLink to="/skills">{t("menu2")}</NavLink></li>
+                <li><NavLink to="/projects">{t("menu3")}</NavLink></li>
+                <li><NavLink to="/contact">{t("menu4")}</NavLink></li>
               </nav>
             ) : (
             <nav className="menu__navbar">

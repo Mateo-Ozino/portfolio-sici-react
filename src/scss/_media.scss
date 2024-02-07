@@ -92,6 +92,10 @@
   .menu__credits {
     padding: 0 30px;
   }
+  .contact > .contact__container {
+    min-width: 0;
+    width: 90%;
+  }
 }
 
 $fonts: variables.$mobile-h1, variables.$mobile-h2, variables.$mobile-h3, variables.$mobile-h4, variables.$mobile-h5, variables.$mobile-h6;
@@ -105,10 +109,11 @@ $fonts: variables.$mobile-h1, variables.$mobile-h2, variables.$mobile-h3, variab
   p {
     font: variables.$mobile-p
   }
-  
-  .menu__navbar > li > a {
-    font: variables.$mobile-h4
+
+  .responsive-nav {
+    padding: 26px 20px;
   }
+
   .active {
     text-decoration: underline 2px;
     text-underline-offset: 8px;
@@ -124,22 +129,55 @@ $fonts: variables.$mobile-h1, variables.$mobile-h2, variables.$mobile-h3, variab
     justify-content: center;
     align-items: center;
     .menu {
-      padding-top: 30px;
+      padding-top: 26px;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 0.2fr 2fr 0.5fr;
       grid-column-gap: 0px;
       grid-row-gap: 5px;
-      &__title {
+      .menu__title {
         white-space: normal;
+        padding-left: 20px;
+      }
+      .menu__navbar > li > a {
+        font: variables.$mobile-h2;
+        padding: 20px 20px;
+      }
+      .menu__credits {
+        padding: 0 20px;
       }
     }
   }
   main {
     width: 100%;
   }
+  .about {
+    padding: 10px 20px 40px 20px;
+    > div {
+      align-self: flex-start;
+      flex-direction: row;
+      gap: 20px;
+      .about__image {
+        width: 117px;
+        height: 117px;
+      }
+      & :last-child {
+        .about__name {
+          align-self: flex-start;
+          margin: 0;
+        }
+        .about__subtitle {
+          align-self: flex-start;
+          margin: 0;
+        }
+      }
+    }
+  }
   .skills {
+    gap: 40px;
+    padding: 10px 19px 40px 19px;
     .skills__hard-soft-container {
+      gap: 40px;
       .hard-skills {
         .hard-skill {
           height: 150px;
@@ -154,16 +192,27 @@ $fonts: variables.$mobile-h1, variables.$mobile-h2, variables.$mobile-h3, variab
     }
     .studies {
       .studies__container {
+        gap: 14px;
         .idioms {
           .idioms__list {
+            padding: 32px 20px 32px 45px;
+            & :last-child {
+              padding-bottom: 0;
+            }
             li > div {
               .idioms__list--progress-container {
-                width: 60%;
+                width: 145px;
+                gap: 20px;
                 .idioms__list--progress-bar {
                   height: 5px;
                 }
                 > div > div {
                   height: 5px;
+                }
+                .idioms__list--score {
+                  span {
+                    font-size: 14px;
+                  }
                 }
               }
             }
@@ -183,6 +232,35 @@ $fonts: variables.$mobile-h1, variables.$mobile-h2, variables.$mobile-h3, variab
       }
     }
   }
+  .projects {
+    padding: 10px 20px 40px 20px;
+    .project {
+      margin-bottom: 30px;
+      gap: 18px;
+      .project-card {
+        .project-card__header {
+          border-radius: 25px 25px 0px 0px;
+          padding: 17px 30px;
+          
+          & :first-child > img {
+            width: 20px;
+          }
+        }
+        .project-card__images-container :nth-child(n+4) {
+          display: none;
+        }
+        .project-card__images-container :nth-child(3) > img {
+          border-radius: 0px 0px 25px 0px;
+        }
+        .project-card__images-container :nth-child(1) > img {
+          border-radius: 0px 0px 0px 25px;
+        }
+      }
+    }
+    & :last-child {
+      margin-bottom: 0;
+    }
+  }
   .contact {
     .contact__container {
       min-width: 0;
@@ -191,6 +269,16 @@ $fonts: variables.$mobile-h1, variables.$mobile-h2, variables.$mobile-h3, variab
         div {
           label {
             font: variables.$mobile-h4;
+          }
+          input {
+            font: variables.$mobile-p
+          }
+          select {
+            font: variables.$mobile-p;
+            padding: 12px 16px;
+          }
+          textarea::placeholder {
+            font: variables.$mobile-p;
           }
         }
       }
