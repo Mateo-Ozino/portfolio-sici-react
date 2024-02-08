@@ -53,7 +53,7 @@ main {
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.20);
   backdrop-filter: blur(20px);
   text-align: center;
-  transition: box-shadow ease-in 0.15s;
+  transition: all ease-in 0.15s;
 }
 
 .menu {
@@ -85,6 +85,9 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    &--opacity {
+      opacity: 1 !important;
+    }
   }
   &__navbar > li {
     display: flex;
@@ -399,10 +402,6 @@ main {
         border: 1px solid var(--Light, variables.$white);
         background: none;
         font: variables.$p;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        background: url('../assets/Keyboard_arrow_down.svg') no-repeat right center;
         option {
           background-color: variables.$dark_purple;
         }

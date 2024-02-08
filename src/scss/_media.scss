@@ -130,14 +130,14 @@ $fonts: variables.$mobile-h1, variables.$mobile-h2, variables.$mobile-h3, variab
     align-items: center;
     .menu {
       padding-top: 26px;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 0.2fr 2fr 0.5fr;
-      grid-column-gap: 0px;
-      grid-row-gap: 5px;
+      display: flex;
+      flex-direction: column;
       .menu__title {
         white-space: normal;
         padding-left: 20px;
+      }
+      .menu__navbar {
+        margin-bottom: auto;
       }
       .menu__navbar > li > a {
         font: variables.$mobile-h2;
@@ -145,6 +145,7 @@ $fonts: variables.$mobile-h1, variables.$mobile-h2, variables.$mobile-h3, variab
       }
       .menu__credits {
         padding: 0 20px;
+        max-width: 25ch;
       }
     }
   }

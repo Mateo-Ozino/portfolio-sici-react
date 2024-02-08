@@ -43,7 +43,7 @@
   "nameLabel": "Name and Last Name",
   "emailLabel": "E-mail",
   "reasonLabel": "Reason for contact:",
-  "optionDefault": "Choose your reason for contacting",
+  "optionDefault": "Choose your reason for contact",
   "option1": "Project",
   "option2": "Info",
   "option3": "Other",

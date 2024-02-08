@@ -81,7 +81,7 @@ main {
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(20px);
   text-align: center;
-  transition: box-shadow ease-in 0.15s;
+  transition: all ease-in 0.15s;
 }
 
 .menu {
@@ -112,6 +112,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.menu__navbar--opacity {
+  opacity: 1 !important;
 }
 .menu__navbar > li {
   display: flex;
@@ -429,10 +432,6 @@ main {
   border: 1px solid var(--Light, #EDE4EB);
   background: none;
   font: normal 400 18px/normal "Poppins";
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: url("../assets/Keyboard_arrow_down.svg") no-repeat right center;
 }
 .contact .contact__container form select option {
   background-color: #A100B3;
@@ -621,15 +620,15 @@ p {
   }
   aside .menu {
     padding-top: 26px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 2fr 0.5fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 5px;
+    display: flex;
+    flex-direction: column;
   }
   aside .menu .menu__title {
     white-space: normal;
     padding-left: 20px;
+  }
+  aside .menu .menu__navbar {
+    margin-bottom: auto;
   }
   aside .menu .menu__navbar > li > a {
     font: normal 500 20px/normal "Poppins";
@@ -637,6 +636,7 @@ p {
   }
   aside .menu .menu__credits {
     padding: 0 20px;
+    max-width: 25ch;
   }
   main {
     width: 100%;
