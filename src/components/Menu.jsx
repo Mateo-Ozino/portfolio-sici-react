@@ -60,35 +60,35 @@ export function Menu({ isNavHidden, handleNav }) {
               </nav>
             ) : (
             <nav className="menu__navbar">
-              <motion.li 
-                initial={{ opacity: 0 }} 
-                whileInView={{ opacity: 1 }}
-                exit={{ opacity: 1 }} 
-                transition={{ duration: 0.4, delay: 0 }} 
+              <li 
+                // initial={{ opacity: 0 }} 
+                // whileInView={{ opacity: 1 }}
+                // exit={{ opacity: 1 }} 
+                // transition={{ duration: 0.4, delay: 0 }} 
                 onClick={handleNav}>
                   <NavLink to="/">{t("menu1")}</NavLink>
-              </motion.li>
-              <motion.li 
-                initial={{ opacity: 0 }} 
-                whileInView={{ opacity: 1 }} 
-                transition={{ duration: 0.4, delay: 0.05 }} 
+              </li>
+              <li 
+                // initial={{ opacity: 0 }} 
+                // whileInView={{ opacity: 1 }} 
+                // transition={{ duration: 0.4, delay: 0.05 }} 
                 onClick={handleNav}>
                   <NavLink to="/skills">{t("menu2")}</NavLink>
-              </motion.li>
-              <motion.li 
-                initial={{ opacity: 0 }} 
-                whileInView={{ opacity: 1 }} 
-                transition={{ duration: 0.4, delay: 0.1 }} 
+              </li>
+              <li 
+                // initial={{ opacity: 0 }} 
+                // whileInView={{ opacity: 1 }} 
+                // transition={{ duration: 0.4, delay: 0.1 }} 
                 onClick={handleNav}>
                   <NavLink to="/projects">{t("menu3")}</NavLink>
-              </motion.li>
-              <motion.li 
-                initial={{ opacity: 0 }} 
-                whileInView={{ opacity: 1 }} 
-                transition={{ duration: 0.4, delay: 0.15 }} 
+              </li>
+              <li 
+                // initial={{ opacity: 0 }} 
+                // whileInView={{ opacity: 1 }} 
+                // transition={{ duration: 0.4, delay: 0.15 }} 
                 onClick={handleNav}>
                   <NavLink to="/contact">{t("menu4")}</NavLink>
-              </motion.li>
+              </li>
             </nav>
             )
           }
