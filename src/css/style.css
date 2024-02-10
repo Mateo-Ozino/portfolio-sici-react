@@ -604,8 +604,13 @@ p {
     padding: 26px 20px;
   }
   .active {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px;
     text-decoration: underline 2px;
+    -webkit-text-decoration: underline 2px;
     text-underline-offset: 8px;
+    -webkit-text-underline-offset: 8px;
     border-radius: 0;
     background: none;
     box-shadow: none;
