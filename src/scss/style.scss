@@ -1,50 +1,13 @@
 @use 'reset';
 @use 'variables';
 @use 'mixins';
+@use 'general';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-// BACKGROUND
-body {
-  background-image: url('../assets/HOME\ -\ ABOUT\ ME.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-// GENERAL PURPOSE
-.responsive-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 30px 0px 30px;
-  svg {
-    width: 30px;
-  }
-}
-
-.mainContainer {
-  @include mixins.flex-row(space-between, flex-start, 0);
-  height: 100dvh;
-  overflow: hidden;
-}
-
-aside {
-  width: 35%;
-  height: 100dvh;
-}
-
-main {
-  width: 100%;
-  height: 100dvh;
-  overflow: hidden auto;
-}
-
-.hidden {
-  display: none
-}
 
 // MENU STYLES
 .active {
@@ -59,16 +22,11 @@ main {
 .menu {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
+  @include mixins.flex-column($align: space-between, $gap: 20px);
   padding-top: 20px;
   padding-bottom: 20px;
   &__responsive {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include mixins.flex-row(space-between, center);
     padding-right: 20px;
     button {
       svg {
@@ -82,16 +40,13 @@ main {
     white-space: pre-line;
   }
   &__navbar {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    @include mixins.flex-column($gap: 20px);
     &--opacity {
       opacity: 1 !important;
     }
   }
   &__navbar > li {
-    display: flex;
-    align-items: center;
+    @include mixins.flex-row($align: center);
     list-style: none;
     width: 320px;
   }
@@ -103,18 +58,13 @@ main {
   &__credits {
     max-width: 31ch;
     padding: 0px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 16px;
+    @include mixins.flex-column(flex-end, flex-start, 16px);
     flex-shrink: 0;
     > p {
       margin: 0;
     }
     div {
-      display: flex;
-      flex-direction: row;
+      @include mixins.flex-row;
       p {
         margin: 0px 5px 0px 5px;
         font-style: normal;
@@ -131,15 +81,10 @@ main {
 
 //ABOUT STYLES
 .about {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  @include mixins.flex-column(flex-start, center);
   padding: 40px 40px 60px 40px;
   > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include mixins.flex-column($align: center);
     margin-bottom: 30px;
     .about__image {
       width: 200px;
@@ -150,10 +95,7 @@ main {
       background-repeat: no-repeat;
     }
     & :last-child {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include mixins.flex-column(center, center);
       .about__name {
         margin: 24px 0 0 0;
       }
@@ -167,7 +109,7 @@ main {
   > article {
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    @include mixins.flex-row($gap: 80px);
     > div {
       > h3 {
         margin-bottom: 20px;
@@ -187,15 +129,10 @@ main {
 
 // SKILLS
 .skills {
+  @include mixins.flex-column($gap: 20px);
   padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   .skills__hard-soft-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
+    @include mixins.flex-row($align: center, $gap: 20px);
   }
   .hard-skills { 
     h2 {
@@ -214,17 +151,12 @@ main {
       .typography { grid-area: 2 / 2 / 3 / 3; }
       .ux_ui { grid-area: 2 / 3 / 3 / 4; }
       .hard-skill {
+        @include mixins.flex-column(center, center, 12px);
         width: 160px;
-        align-items: center;
+        height: 199px;
         background: linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
         border-radius: 34px;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        height: 199px;
-        justify-content: center;
         overflow: hidden;
-        width: 160px;
         h4 {
           text-align: center;
         }
@@ -249,11 +181,7 @@ main {
       padding-bottom: 15px;
     }
     .studies__container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
+      @include mixins.flex-row(center, center, 20px)
     }
     .studies-details {
       width: 45%;
@@ -276,20 +204,12 @@ main {
         li {
           padding: 0px 0px 15px 5px;
           > div {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include mixins.flex-row(space-between, center);
             .idioms__list--progress-container {
               width: 70%;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              gap: 35px;
+              @include mixins.flex-row(space-between, center, 35px);
               .idioms__list--score {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 5px;
+                @include mixins.flex-row(center, center, 5px);
                 span {
                   font-size: 18px;
                 }
@@ -309,20 +229,15 @@ main {
 .projects {
   padding: 40px 40px 18px 40px;
   .project {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    @include mixins.flex-column($gap: 10px);
     margin-bottom: 22px;
     p {
       margin-bottom: 8px;
     }
     .project-card {
       .project-card__header {
+        @include mixins.flex-row(space-between, center);
         border-radius: 36px 36px 0px 0px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
         padding: 17px 34px;
         background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%));
         div > img {
@@ -332,13 +247,10 @@ main {
           margin: 0;
         }
         & :first-child {
-          display: flex;
-          align-items: center;
-          gap: 12px;
+          @include mixins.flex-row($align: center, $gap: 12px)
         }
         & :nth-child(2) {
-          display: flex;
-          gap: 8px;
+          @include mixins.flex-row($gap: 8px)
         }
       }
       .project-card__images-container {
@@ -360,17 +272,13 @@ main {
 
 // Contact Form
 .contact {
-  display: flex;
+  @include mixins.flex-row(center, center);
   width: 100%;
   padding: 25px 0 25px 0;
-  justify-content: center;
-  align-items: center;
   .contact__container {
     min-width: 600px;
     form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      @include mixins.flex-column(center);
       border-radius: 36px;
       background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%));
       padding: 30px;
@@ -402,6 +310,13 @@ main {
         border: 1px solid var(--Light, variables.$white);
         background: none;
         font: variables.$p;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url('../assets/Keyboard_arrow_down.svg');
+        background-repeat: no-repeat;
+        background-position: right .75rem center;
+        background-size: 20px 32px;
         option {
           background-color: variables.$dark_purple;
         }
@@ -436,6 +351,7 @@ main {
   }
 }
 
+// Setting all the fonts
 $fonts: variables.$h1, variables.$h2, variables.$h3, variables.$h4, variables.$h5, variables.$h6;
 
 @for $i from 1 through 6 {
@@ -452,4 +368,5 @@ p {
   font: variables.$h4
 }
 
+// Media Queries
 @import 'media';

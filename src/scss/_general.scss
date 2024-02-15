@@ -1,0 +1,39 @@
+@use 'mixins';
+
+// BACKGROUND
+body {
+  background-image: url('../assets/HOME\ -\ ABOUT\ ME.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// GENERAL PURPOSE
+.responsive-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px 0px 30px;
+  svg {
+    width: 30px;
+  }
+}
+
+.mainContainer {
+  @include mixins.flex-row(space-between, flex-start, 0);
+  height: 100dvh;
+  overflow: hidden;
+}
+
+aside {
+  width: 35%;
+  height: 100dvh;
+}
+
+main {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden auto;
+}
+
+.hidden {
+  display: none
+}

@@ -85,7 +85,7 @@ export function ContactForm() {
             />
             <p className='form__error-message'>{errors.email?.message}</p>
           </div>
-          <div className="mb-5 prueba">
+          <div className="mb-5">
             <label htmlFor="reason" className="block mb-3">
               {t("reasonLabel")}
             </label>

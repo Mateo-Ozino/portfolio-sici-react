@@ -32,9 +32,6 @@ p {
   text-wrap: pretty;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 body {
   background-image: url("../assets/HOME - ABOUT ME.png");
   background-size: cover;
@@ -75,6 +72,9 @@ main {
   display: none;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .active {
   border-radius: 0px 40px 40px 0px;
   background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
@@ -89,15 +89,18 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: initial;
+  align-items: space-between;
   gap: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 .menu__responsive {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 0;
   padding-right: 20px;
 }
 .menu__responsive button svg {
@@ -111,6 +114,8 @@ main {
 .menu__navbar {
   display: flex;
   flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
   gap: 20px;
 }
 .menu__navbar--opacity {
@@ -118,7 +123,10 @@ main {
 }
 .menu__navbar > li {
   display: flex;
+  flex-direction: row;
+  justify-content: initial;
   align-items: center;
+  gap: 0;
   list-style: none;
   width: 320px;
 }
@@ -143,6 +151,9 @@ main {
 .menu__credits div {
   display: flex;
   flex-direction: row;
+  justify-content: initial;
+  align-items: initial;
+  gap: 0;
 }
 .menu__credits div p {
   margin: 0px 5px 0px 5px;
@@ -160,12 +171,15 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  gap: 0;
   padding: 40px 40px 60px 40px;
 }
 .about > div {
   display: flex;
   flex-direction: column;
+  justify-content: initial;
   align-items: center;
+  gap: 0;
   margin-bottom: 30px;
 }
 .about > div .about__image {
@@ -179,8 +193,9 @@ main {
 .about > div :last-child {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 0;
 }
 .about > div :last-child .about__name {
   margin: 24px 0 0 0;
@@ -193,6 +208,10 @@ main {
 .about > article {
   display: flex;
   flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  justify-content: initial;
+  align-items: initial;
   gap: 80px;
 }
 .about > article > div > h3 {
@@ -208,14 +227,17 @@ main {
 }
 
 .skills {
-  padding: 40px;
   display: flex;
   flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
   gap: 20px;
+  padding: 40px;
 }
 .skills .skills__hard-soft-container {
   display: flex;
   flex-direction: row;
+  justify-content: initial;
   align-items: center;
   gap: 20px;
 }
@@ -248,17 +270,16 @@ main {
   grid-area: 2/3/3/4;
 }
 .skills .hard-skills .hard-skills__container .hard-skill {
-  width: 160px;
-  align-items: center;
-  background: linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
-  border-radius: 34px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  height: 199px;
   justify-content: center;
-  overflow: hidden;
+  align-items: center;
+  gap: 12px;
   width: 160px;
+  height: 199px;
+  background: linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 34px;
+  overflow: hidden;
 }
 .skills .hard-skills .hard-skills__container .hard-skill h4 {
   text-align: center;
@@ -317,18 +338,22 @@ main {
 }
 .skills .studies .idioms .idioms__list li > div {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 0;
 }
 .skills .studies .idioms .idioms__list li > div .idioms__list--progress-container {
   width: 70%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 35px;
 }
 .skills .studies .idioms .idioms__list li > div .idioms__list--progress-container .idioms__list--score {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 5px;
@@ -346,6 +371,8 @@ main {
 .projects .project {
   display: flex;
   flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
   gap: 10px;
   margin-bottom: 22px;
 }
@@ -353,11 +380,12 @@ main {
   margin-bottom: 8px;
 }
 .projects .project .project-card .project-card__header {
-  border-radius: 36px 36px 0px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 0;
+  border-radius: 36px 36px 0px 0px;
   padding: 17px 34px;
   background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
 }
@@ -369,11 +397,16 @@ main {
 }
 .projects .project .project-card .project-card__header :first-child {
   display: flex;
+  flex-direction: row;
+  justify-content: initial;
   align-items: center;
   gap: 12px;
 }
 .projects .project .project-card .project-card__header :nth-child(2) {
   display: flex;
+  flex-direction: row;
+  justify-content: initial;
+  align-items: initial;
   gap: 8px;
 }
 .projects .project .project-card .project-card__images-container {
@@ -388,10 +421,12 @@ main {
 
 .contact {
   display: flex;
-  width: 100%;
-  padding: 25px 0 25px 0;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 0;
+  width: 100%;
+  padding: 25px 0 25px 0;
 }
 .contact .contact__container {
   min-width: 600px;
@@ -400,6 +435,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: initial;
+  gap: 0;
   border-radius: 36px;
   background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
   padding: 30px;
@@ -432,6 +469,13 @@ main {
   border: 1px solid var(--Light, #EDE4EB);
   background: none;
   font: normal 400 18px/normal "Poppins";
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../assets/Keyboard_arrow_down.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 20px 32px;
 }
 .contact .contact__container form select option {
   background-color: #A100B3;
