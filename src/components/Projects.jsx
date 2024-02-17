@@ -9,9 +9,9 @@ export function Projects() {
     <section className="projects">
       {
         projects.map(project => {
-          const { id, name, images, logo } = project
+          const { id, images, logo } = project
           return (
-            <Project key={`${Math.floor(Math.random() * 100)}-${id}`} number={id} projectName={name} projectImages={images} projectLogo={logo}>
+            <Project key={id} number={id} projectName={t(`projectName${id}`)} projectImages={images} projectLogo={logo}>
               {t(`projectContent${id}`)}
             </Project>
           )
