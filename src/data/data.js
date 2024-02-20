@@ -16,13 +16,13 @@ export const projects = [
     "logo": mateoLogo
   }
   // {
-  //   "id": 1,
+  //   "id": 2,
   //   "name": "Ruda Macho Rugby",
   //   "images": [sici, sici, sici, sici],
   //   "logo" : rudaLogo
   // },
   // {
-  //   "id": 2,
+  //   "id": 3,
   //   "name": "Tinky",
   //   "images": [sici, sici, sici],
   //   "logo":tinkyLogo

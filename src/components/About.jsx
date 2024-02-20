@@ -12,7 +12,6 @@ export function About() {
           <h2 className="about__name">Sicilia Arito</h2>
           <h5 className="about__subtitle">Graphic and UI Designer</h5>
         </div>
-        
       </div>
       <article>
         <div>

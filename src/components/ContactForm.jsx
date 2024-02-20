@@ -16,7 +16,7 @@ export function ContactForm() {
   const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //Correo
-    mensaje: /^[a-zA-Z0-9,.!?¡¿\s]+$/, //Letras y símbolos
+    mensaje: /^[a-zA-Z0-9,.!?¡¿\s"()]+$/, //Letras y símbolos
   }
 
   const onSubmit = handleSubmit(data => {
@@ -121,11 +121,11 @@ export function ContactForm() {
                 required: {
                   value: true,
                   message: t("fieldRequired"),
-                  pattern: {
-                    value: expresiones.mensaje,
-                    message: t("fieldIncorrect")
-                  }
                 },
+                pattern: {
+                  value: expresiones.mensaje,
+                  message: t("fieldIncorrect")
+                }
               })}
             >
             </textarea>
