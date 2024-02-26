@@ -6,7 +6,7 @@ import { Skills } from './components/Skills'
 import { Projects } from './components/Projects'
 import { ContactForm } from './components/ContactForm'
 import { IoMdMenu } from "react-icons/io";
-import { useState , useEffect} from 'react';
+import { useState , useEffect } from 'react';
 import { useTranslation } from "react-i18next"
 
 function App() {

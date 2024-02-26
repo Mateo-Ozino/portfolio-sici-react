@@ -9,9 +9,16 @@ export function Projects() {
     <section className="projects">
       {
         projects.map(project => {
-          const { id, images, logo } = project
+          const { id, images, logo, behanceLink } = project
           return (
-            <Project key={id} number={id} projectName={t(`projectName${id}`)} projectImages={images} projectLogo={logo}>
+            <Project 
+              key={id} 
+              number={id} 
+              projectName={t(`projectName${id}`)} 
+              projectImages={images} 
+              projectLogo={logo}
+              behanceLink={behanceLink}
+            >
               {t(`projectContent${id}`)}
             </Project>
           )
