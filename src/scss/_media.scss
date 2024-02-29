@@ -243,18 +243,17 @@ $fonts: variables.$mobile-h1, variables.$mobile-h2, variables.$mobile-h3, variab
     padding: 10px 20px 40px 20px;
     .project {
       margin-bottom: 30px;
-      gap: 18px;
+      gap: 4px;
+      p {
+        margin-bottom: 16px;
+      }
       .project-card {
         .project-card__header {
           border-radius: 25px 25px 0px 0px;
           padding: 17px 30px;
-          
           & :first-child > img {
             width: 20px;
           }
-        }
-        .project-card__images-container :nth-child(n+4) {
-          display: none;
         }
         .project-card__images-container :nth-child(3) > img {
           border-radius: 0px 0px 25px 0px;

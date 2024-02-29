@@ -374,7 +374,7 @@ main {
   justify-content: initial;
   align-items: initial;
   gap: 10px;
-  margin-bottom: 22px;
+  margin-bottom: 36px;
 }
 .projects .project p {
   margin-bottom: 8px;
@@ -411,6 +411,9 @@ main {
 }
 .projects .project .project-card .project-card__images-container {
   display: flex;
+}
+.projects .project .project-card .project-card__images-container figure > img {
+  aspect-ratio: 16/9;
 }
 .projects .project .project-card .project-card__images-container :first-child img {
   border-radius: 0px 0px 0px 36px;
@@ -762,7 +765,10 @@ p {
   }
   .projects .project {
     margin-bottom: 30px;
-    gap: 18px;
+    gap: 4px;
+  }
+  .projects .project p {
+    margin-bottom: 16px;
   }
   .projects .project .project-card .project-card__header {
     border-radius: 25px 25px 0px 0px;
@@ -770,9 +776,6 @@ p {
   }
   .projects .project .project-card .project-card__header :first-child > img {
     width: 20px;
-  }
-  .projects .project .project-card .project-card__images-container :nth-child(n+4) {
-    display: none;
   }
   .projects .project .project-card .project-card__images-container :nth-child(3) > img {
     border-radius: 0px 0px 25px 0px;

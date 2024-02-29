@@ -230,7 +230,7 @@
   padding: 40px 40px 18px 40px;
   .project {
     @include mixins.flex-column($gap: 10px);
-    margin-bottom: 22px;
+    margin-bottom: 36px;
     p {
       margin-bottom: 8px;
     }
@@ -255,6 +255,9 @@
       }
       .project-card__images-container {
         display: flex;
+        figure > img {
+          aspect-ratio: 16/9;
+        }
         & :first-child {
           img {
             border-radius: 0px 0px 0px 36px;
