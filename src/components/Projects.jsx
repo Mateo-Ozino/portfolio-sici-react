@@ -1,6 +1,6 @@
-import { Project } from "./projectsComponets/Project"
+import { Project } from "./projects/Project"
 import { useTranslation } from 'react-i18next'
-import { projects } from "../data/data"
+import { projects } from "../data/projects"
 
 export function Projects() {
   const { t } = useTranslation()

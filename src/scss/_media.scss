@@ -1,9 +1,13 @@
 @media screen and (max-height: 665px) {
   .menu {
     justify-content: space-evenly;
-    .menu__navbar > li > a {
+    &__navbar > li > a {
       padding-top: 20px;
       padding-bottom: 20px;
+    }
+    &__credits {
+      padding: 15px 30px;
+      gap: 0;
     }
   }
   .contact {
@@ -68,6 +72,9 @@
       }
     }
     .studies {
+      h2 {
+        padding-left: 0;
+      }
       .studies__container {
         .studies-details {
           width: 100%;
@@ -90,7 +97,7 @@
     }
   }
   .menu__credits {
-    padding: 0 30px;
+    padding: 15px 30px;
   }
   .contact > .contact__container {
     min-width: 0;
@@ -254,6 +261,10 @@ $fonts: variables.$mobile-h1, variables.$mobile-h2, variables.$mobile-h3, variab
           & :first-child > img {
             width: 20px;
           }
+        }
+        .project-card__images-container figure > img {
+          aspect-ratio: 5/4;
+          object-fit: cover;
         }
         .project-card__images-container :nth-child(3) > img {
           border-radius: 0px 0px 25px 0px;

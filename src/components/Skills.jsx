@@ -1,6 +1,6 @@
-import { HardSkills } from "./skillsComponents/HardSkills";
-import { SoftSkills } from "./skillsComponents/SoftSkills";
-import { Studies } from "./skillsComponents/Studies";
+import { HardSkills } from "./skills/HardSkills";
+import { SoftSkills } from "./skills/SoftSkills";
+import { Studies } from "./skills/Studies";
 
 export function Skills () {
   return (

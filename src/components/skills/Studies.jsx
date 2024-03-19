@@ -1,5 +1,5 @@
-import { StudiesDetails } from "./studiesComponents/StudiesDetails";
-import { Idioms } from "./studiesComponents/Idioms";
+import { StudiesDetails } from "./studies/StudiesDetails";
+import { Idioms } from "./studies/Idioms";
 
 
 export function Studies() {

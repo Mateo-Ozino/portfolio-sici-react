@@ -4,6 +4,7 @@ import { Menu } from './components/Menu'
 import { About } from './components/About'
 import { Skills } from './components/Skills'
 import { Projects } from './components/Projects'
+import { Services } from './components/Services'
 import { ContactForm } from './components/ContactForm'
 import { IoMdMenu } from "react-icons/io";
 import { useState , useEffect } from 'react';
@@ -49,6 +50,7 @@ function App() {
           <Route path='/' element={<About />} />
           <Route path='/skills' element={<Skills />}/>
           <Route path='/projects' element={<Projects />}/>
+          <Route path='/services' element={<Services />}/>
           <Route path='/contact' element={<ContactForm />}/>
           <Route path='*' element={<h1>Not Found</h1>}/>
         </Routes>

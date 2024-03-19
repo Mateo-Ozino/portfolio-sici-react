@@ -22,7 +22,7 @@
 .menu {
   width: 100%;
   height: 100%;
-  @include mixins.flex-column($justify: space-between, $gap: 20px);
+  @include mixins.flex-column($justify: space-between, $gap: 0);
   padding-top: 20px;
   padding-bottom: 20px;
   &__responsive {
@@ -40,7 +40,7 @@
     white-space: pre-line;
   }
   &__navbar {
-    @include mixins.flex-column($gap: 20px);
+    @include mixins.flex-column($gap: 10px);
     &--opacity {
       opacity: 1 !important;
     }
@@ -53,7 +53,7 @@
   &__navbar > li > a {
     width: 300px;
     color: white;
-    padding: 30px 60px;
+    padding: 25px 55px;
   }
   &__credits {
     max-width: 31ch;
@@ -268,6 +268,89 @@
             border-radius: 0px 0px 36px 0px;
           }
         }
+      }
+    }
+  }
+}
+
+// SERVICES
+.services {
+  padding: 40px;
+  h2 {
+    margin-bottom: 30px;
+  }
+  &__card {
+    display: grid;
+    grid-template-columns: .5fr 4fr .5fr;
+    grid-template-rows: 1fr;
+    column-gap: 50px;
+    padding: 30px;
+    margin-bottom: 50px;
+    border-radius: 36px;
+    background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%));
+    button {
+      width: 50px;
+      .div1 { grid-area: 1 / 1 / 2 / 2; }
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    &--content-container {
+      @include mixins.flex-column(center, initial, 30px);
+      width: 100%;
+      .div1 { grid-area: 1 / 1 / 2 / 2; }
+    }
+    &--header {
+      @include mixins.flex-column(center, center, 0);
+      h2 {
+        font: variables.$h1;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 0;
+      }
+      h3 {
+        text-align: center;
+        width: fit-content
+      }
+    }
+    &--content {
+      @include mixins.flex-row(center, center, 0);
+      ul {
+        width: 100%;
+        @include mixins.flex-column($align: flex-start, $gap: 30px);
+        li {
+          width: 100%;
+          @include mixins.flex-row(space-between, flex-start, 0);
+          // display: grid;
+          // grid-template-columns: .5fr 2fr;
+          // grid-template-rows: 1fr;
+          // grid-column-gap: 45px;
+          // grid-row-gap: 0px;
+          
+          & :first-child {
+            vertical-align: super;
+            grid-area: 1 / 1 / 2 / 2;
+          }
+          & :last-child {
+            max-width: 25ch;
+            grid-area: 1 / 2 / 2 / 3;
+            justify-self: start;
+          }
+        }
+      }
+    }
+    &--navigation-dots {
+      @include mixins.flex-row(center, center, 8px);
+      span {
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        border: 1px solid white;
+        cursor: pointer;
+      }
+      .active {
+        background-color: white;
       }
     }
   }

@@ -91,7 +91,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: initial;
-  gap: 20px;
+  gap: 0;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -116,7 +116,7 @@ main {
   flex-direction: column;
   justify-content: initial;
   align-items: initial;
-  gap: 20px;
+  gap: 10px;
 }
 .menu__navbar--opacity {
   opacity: 1 !important;
@@ -133,7 +133,7 @@ main {
 .menu__navbar > li > a {
   width: 300px;
   color: white;
-  padding: 30px 60px;
+  padding: 25px 55px;
 }
 .menu__credits {
   max-width: 31ch;
@@ -422,6 +422,110 @@ main {
   border-radius: 0px 0px 36px 0px;
 }
 
+.services {
+  padding: 40px;
+}
+.services h2 {
+  margin-bottom: 30px;
+}
+.services__card {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr 0.5fr;
+  grid-template-rows: 1fr;
+  column-gap: 50px;
+  padding: 30px;
+  margin-bottom: 50px;
+  border-radius: 36px;
+  background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
+}
+.services__card button {
+  width: 50px;
+}
+.services__card button .div1 {
+  grid-area: 1/1/2/2;
+}
+.services__card button svg {
+  width: 50px;
+  height: 50px;
+}
+.services__card--content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: initial;
+  gap: 30px;
+  width: 100%;
+}
+.services__card--content-container .div1 {
+  grid-area: 1/1/2/2;
+}
+.services__card--header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.services__card--header h2 {
+  font: normal 600 30px/normal "Poppins";
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 0;
+}
+.services__card--header h3 {
+  text-align: center;
+  width: fit-content;
+}
+.services__card--content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.services__card--content ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: flex-start;
+  gap: 30px;
+}
+.services__card--content ul li {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+}
+.services__card--content ul li :first-child {
+  vertical-align: super;
+  grid-area: 1/1/2/2;
+}
+.services__card--content ul li :last-child {
+  max-width: 25ch;
+  grid-area: 1/2/2/3;
+  justify-self: start;
+}
+.services__card--navigation-dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.services__card--navigation-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.services__card--navigation-dots .active {
+  background-color: white;
+}
+
 .contact {
   display: flex;
   flex-direction: row;
@@ -546,9 +650,13 @@ p {
   .menu {
     justify-content: space-evenly;
   }
-  .menu .menu__navbar > li > a {
+  .menu__navbar > li > a {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  .menu__credits {
+    padding: 15px 30px;
+    gap: 0;
   }
   .contact {
     height: auto;
@@ -604,6 +712,9 @@ p {
   .skills .skills__hard-soft-container .soft-skills {
     width: 100%;
   }
+  .skills .studies h2 {
+    padding-left: 0;
+  }
   .skills .studies .studies__container .studies-details {
     width: 100%;
   }
@@ -618,7 +729,7 @@ p {
     padding: 20px 40px;
   }
   .menu__credits {
-    padding: 0 30px;
+    padding: 15px 30px;
   }
   .contact > .contact__container {
     min-width: 0;
@@ -776,6 +887,10 @@ p {
   }
   .projects .project .project-card .project-card__header :first-child > img {
     width: 20px;
+  }
+  .projects .project .project-card .project-card__images-container figure > img {
+    aspect-ratio: 5/4;
+    object-fit: cover;
   }
   .projects .project .project-card .project-card__images-container :nth-child(3) > img {
     border-radius: 0px 0px 25px 0px;
