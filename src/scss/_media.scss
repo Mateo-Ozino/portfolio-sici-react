@@ -103,6 +103,12 @@
     min-width: 0;
     width: 90%;
   }
+  .services__card {
+    grid-template-columns: 1fr;
+    > button {
+      display: none;
+    }
+  }
 }
 
 $fonts: variables.$mobile-h1, variables.$mobile-h2, variables.$mobile-h3, variables.$mobile-h4, variables.$mobile-h5, variables.$mobile-h6;

@@ -18,10 +18,9 @@ export const services = [
           "en": "20 days"
         },
         "price": {
-          "es": "90 USD",
-          "en": "90 USD"
-        },
-        "disclaimer": false
+          "es": "Desde 90 USD",
+          "en": "From 90 USD"
+        }
       },
       {
         "name": "Standard Package",
@@ -38,10 +37,9 @@ export const services = [
           "en": "30 days"
         },
         "price": {
-          "es": "120 USD",
-          "en": "120 USD"
-        },
-        "disclaimer": false
+          "es": "Desde 120 USD",
+          "en": "From 120 USD"
+        }
       },
       {
         "name": "Full Package",
@@ -58,10 +56,9 @@ export const services = [
           "en": "50 days"
         },
         "price": {
-          "es": "220 USD",
-          "en": "220 USD"
-        },
-        "disclaimer": false
+          "es": "Desde 220 USD",
+          "en": "From 220 USD"
+        }
       }
     ]
   },
@@ -84,10 +81,9 @@ export const services = [
           "en": "10 days"
         },
         "price": {
-          "es": "40 USD",
-          "en": "40 USD"
-        },
-        "disclaimer": false
+          "es": "Desde 40 USD",
+          "en": "From 40 USD"
+        }
       },
       {
         "name": "Standard Package",
@@ -104,10 +100,9 @@ export const services = [
           "en": "20 days"
         },
         "price": {
-          "es": "70 USD",
-          "en": "70 USD"
-        },
-        "disclaimer": false
+          "es": "Desde 70 USD",
+          "en": "From 70 USD"
+        }
       },
       {
         "name": "Full Package",
@@ -124,10 +119,9 @@ export const services = [
           "en": "30 days"
         },
         "price": {
-          "es": "100 USD",
-          "en": "100 USD"
-        },
-        "disclaimer": false
+          "es": "Desde 100 USD",
+          "en": "From 100 USD"
+        }
       }
     ]
   },
@@ -152,8 +146,7 @@ export const services = [
         "price": {
           "es": "Desde 100 USD",
           "en" : "From 100 USD"
-        },
-        "disclaimer": false
+        }
       },
       {
         "name": "Standard Package",
@@ -172,10 +165,6 @@ export const services = [
         "price": {
           "es": "Desde 220 USD",
           "en": "From 220 USD"
-        },
-        "disclaimer": {
-          "es": "Por cada página extra se añadirán 20 USD",
-          "en": "For each extra page, 20 USD will be charged"
         }
       },
       {
@@ -195,10 +184,6 @@ export const services = [
         "price": {
           "es": "Desde 320 USD",
           "en": "From 320 USD"
-        },
-        "disclaimer": {
-          "es": "Por cada página extra se añadirán 20 USD",
-          "en": "For each extra page, 20 USD will be charged"
         }
       }
     ]

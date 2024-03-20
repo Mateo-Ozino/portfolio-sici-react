@@ -495,18 +495,17 @@ main {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
 }
-.services__card--content ul li :first-child {
-  vertical-align: super;
-  grid-area: 1/1/2/2;
-}
-.services__card--content ul li :last-child {
-  max-width: 25ch;
-  grid-area: 1/2/2/3;
-  justify-self: start;
+.services__card--disclaimer p {
+  font-size: 10px;
+  text-align: center;
+  font-style: italic;
 }
 .services__card--navigation-dots {
   display: flex;
@@ -734,6 +733,12 @@ p {
   .contact > .contact__container {
     min-width: 0;
     width: 90%;
+  }
+  .services__card {
+    grid-template-columns: 1fr;
+  }
+  .services__card > button {
+    display: none;
   }
 }
 @media screen and (max-width: 768px) {
