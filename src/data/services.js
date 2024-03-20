@@ -18,8 +18,8 @@ export const services = [
           "en": "20 days"
         },
         "price": {
-          "es": "Desde 90 USD",
-          "en": "From 90 USD"
+          "es": "Desde 200 USD",
+          "en": "From 200 USD"
         }
       },
       {
@@ -37,8 +37,8 @@ export const services = [
           "en": "30 days"
         },
         "price": {
-          "es": "Desde 120 USD",
-          "en": "From 120 USD"
+          "es": "Desde 260 USD",
+          "en": "From 260 USD"
         }
       },
       {
@@ -56,8 +56,8 @@ export const services = [
           "en": "50 days"
         },
         "price": {
-          "es": "Desde 220 USD",
-          "en": "From 220 USD"
+          "es": "Desde 360 USD",
+          "en": "From 360 USD"
         }
       }
     ]
@@ -144,8 +144,8 @@ export const services = [
           "en": "15 days"
         },
         "price": {
-          "es": "Desde 100 USD",
-          "en" : "From 100 USD"
+          "es": "Desde 220 USD",
+          "en" : "From 220 USD"
         }
       },
       {
@@ -163,8 +163,8 @@ export const services = [
           "en": "30 days"
         },
         "price": {
-          "es": "Desde 220 USD",
-          "en": "From 220 USD"
+          "es": "Desde 350 USD",
+          "en": "From 350 USD"
         }
       },
       {
@@ -182,8 +182,8 @@ export const services = [
           "en": "40 days"
         },
         "price": {
-          "es": "Desde 320 USD",
-          "en": "From 320 USD"
+          "es": "Desde 390 USD",
+          "en": "From 390 USD"
         }
       }
     ]

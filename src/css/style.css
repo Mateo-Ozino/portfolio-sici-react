@@ -433,7 +433,7 @@ main {
   grid-template-columns: 0.5fr 4fr 0.5fr;
   grid-template-rows: 1fr;
   column-gap: 50px;
-  padding: 30px;
+  padding: 30px 40px 40px 40px;
   margin-bottom: 50px;
   border-radius: 36px;
   background: var(--Glass-effect, linear-gradient(97deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%));
@@ -734,11 +734,22 @@ p {
     min-width: 0;
     width: 90%;
   }
+  .services {
+    padding: 10px 20px 40px 20px;
+  }
+  .services > h2 {
+    margin-bottom: 20px;
+  }
   .services__card {
+    padding: 30px 35px 35px 35px;
+    margin-bottom: 40px;
     grid-template-columns: 1fr;
   }
   .services__card > button {
     display: none;
+  }
+  .services__card--content ul li :nth-child(2) {
+    margin-left: 5px;
   }
 }
 @media screen and (max-width: 768px) {

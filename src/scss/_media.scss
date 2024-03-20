@@ -103,10 +103,23 @@
     min-width: 0;
     width: 90%;
   }
-  .services__card {
-    grid-template-columns: 1fr;
-    > button {
-      display: none;
+  .services {
+    padding: 10px 20px 40px 20px;
+    > h2 {
+      margin-bottom: 20px;
+    }
+    &__card {
+      padding: 30px 35px 35px 35px;
+      margin-bottom: 40px;
+      grid-template-columns: 1fr;
+      > button {
+        display: none;
+      }
+      &--content {
+        ul li :nth-child(2) {
+          margin-left: 5px;
+        }
+      }
     }
   }
 }
