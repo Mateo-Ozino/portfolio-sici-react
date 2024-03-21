@@ -54,11 +54,11 @@ export function Menu({ isNavHidden, handleNav }) {
                 </li>
                 <li
                   className='menu__navbar--opacity'>
-                    <NavLink to="/services">Services</NavLink>
+                    <NavLink to="/services">{t("menu4")}</NavLink>
                 </li>
                 <li
                   className='menu__navbar--opacity'>
-                    <NavLink to="/contact">{t("menu4")}</NavLink>
+                    <NavLink to="/contact">{t("menu5")}</NavLink>
                 </li>
               </nav>
             ) : (
@@ -90,14 +90,14 @@ export function Menu({ isNavHidden, handleNav }) {
                 whileInView={{ opacity: 1 }} 
                 transition={{ duration: 0.4, delay: 0.15 }} 
                 onClick={handleNav}>
-                  <NavLink to="/services">Services</NavLink>
+                  <NavLink to="/services">{t("menu4")}</NavLink>
               </motion.li>
               <motion.li 
                 initial={{ opacity: 0 }} 
                 whileInView={{ opacity: 1 }} 
                 transition={{ duration: 0.4, delay: 0.20 }} 
                 onClick={handleNav}>
-                  <NavLink to="/contact">{t("menu4")}</NavLink>
+                  <NavLink to="/contact">{t("menu5")}</NavLink>
               </motion.li>
             </nav>
             )
