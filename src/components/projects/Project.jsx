@@ -1,13 +1,12 @@
 import PropTypes from "prop-types";
 import { ProjectCard } from "./ProjectCard"
-import { useTranslation } from 'react-i18next'
+// import { useTranslation } from 'react-i18next'
 
-export function Project({ children, number, projectName, projectImages, projectLogo, behanceLink }) {
-  const { t } = useTranslation()
+export function Project({ children, projectName, projectImages, projectLogo, behanceLink }) {
   
   return (
     <article className="project">
-      <h2>{t("project")} #{number} {projectName}</h2>
+      <h2>{projectName}</h2>
       <p>{children}</p>
       <ProjectCard 
         projectName={projectName}
