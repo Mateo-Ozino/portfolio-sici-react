@@ -2,6 +2,8 @@ import { Project } from "./projects/Project"
 import { useTranslation } from 'react-i18next'
 import { projects } from "../data/projects"
 import { useState } from 'react'
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 export function Projects() {
   const { t } = useTranslation()
@@ -34,8 +36,10 @@ export function Projects() {
             cursor: currentProjectIndex === 0 ? 'not-allowed' : 'pointer'
           }}
         >
+          <MdKeyboardArrowLeft />
           Previous
         </button>
+        |
         <button 
           onClick={handleNextProject} 
           disabled={currentProjectIndex === projects.length - 1}
@@ -45,12 +49,14 @@ export function Projects() {
           }}
         >
           Next
+          <MdKeyboardArrowRight />
         </button>
       </nav>
       <Project 
         number={currentProject.id} 
         projectName={t(`projectName${currentProject.id}`)} 
-        projectImage={currentProject.image} 
+        projectDesktopImage={currentProject.desktopImage}
+        projectMobileImage={currentProject.mobileImage}
         projectLogo={currentProject.logo}
         behanceLink={currentProject.behanceLink}
       >

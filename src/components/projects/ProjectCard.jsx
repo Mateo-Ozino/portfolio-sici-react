@@ -1,6 +1,27 @@
 import PropTypes from "prop-types";
+import { useState, useEffect } from 'react';
 
-export function ProjectCard ({ projectName, projectImage, projectLogo }) {
+export function ProjectCard ({ projectName, projectDesktopImage, projectMobileImage, projectLogo }) {
+  const [anchoComponente, setAnchoComponente] = useState(0);
+
+  const handleResize = () => {
+    const ancho = document.getElementById('mainContainer').offsetWidth;
+    setAnchoComponente(ancho);
+  };
+
+  useEffect(() => {
+    // Configuración inicial
+    handleResize();
+
+    // Agregar el evento de escucha del cambio de tamaño
+    window.addEventListener('resize', handleResize);
+
+    // Limpiar el evento de escucha al desmontar el componente
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <section className="project-card">
       <header className="project-card__header">
@@ -12,7 +33,7 @@ export function ProjectCard ({ projectName, projectImage, projectLogo }) {
       <section className="project-card__images-container">
         {
           <figure>
-            <img src={projectImage} alt={`Fotos del proyecto`}/>
+            <img src={anchoComponente > 768 ? projectDesktopImage : projectMobileImage} alt={`Fotos del proyecto`}/>
           </figure>
         }
       </section>
@@ -22,6 +43,7 @@ export function ProjectCard ({ projectName, projectImage, projectLogo }) {
 
 ProjectCard.propTypes = {
   projectName: PropTypes.string,
-  projectImage: PropTypes.string,
+  projectDesktopImage: PropTypes.string,
+  projectMobileImage: PropTypes.string,
   projectLogo: PropTypes.string,
 };
