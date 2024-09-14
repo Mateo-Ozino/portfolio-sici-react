@@ -3,7 +3,7 @@ import { ProjectCard } from "./ProjectCard"
 import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react';
 
-export function Project({ children, projectName, projectDesktopImage, projectMobileImage , projectLogo, behanceLink }) {
+export function Project({ children, projectName, projectDesktopImage, projectMobileImage, behanceLink }) {
   const [anchoComponente, setAnchoComponente] = useState(0);
 
   const handleResize = () => {
@@ -40,7 +40,8 @@ export function Project({ children, projectName, projectDesktopImage, projectMob
             <p className={isTruncated ? 'truncated' : ''}>
               {children}
             </p>
-            <span className="project__content--truncator"><button onClick={toggleTruncate}>{isTruncated ? t('verMas') : t('verMenos')}</button></span>
+            <span 
+              className="project__content--truncator"><button onClick={toggleTruncate} style={{marginBottom:'18px'}}>{isTruncated ? t('verMas') : t('verMenos')}</button></span>
             </div>
           ) : (
             <p>{children}</p>
@@ -51,7 +52,6 @@ export function Project({ children, projectName, projectDesktopImage, projectMob
         projectName={projectName}
         projectDesktopImage={projectDesktopImage}
         projectMobileImage={projectMobileImage}
-        projectLogo={projectLogo}
         />
         <div className="project__behance-button">
           <button>

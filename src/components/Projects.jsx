@@ -45,7 +45,7 @@ export function Projects() {
           disabled={currentProjectIndex === projects.length - 1}
           style={{
             opacity: currentProjectIndex === projects.length - 1 ? 0.5 : 1,
-            cursor: currentProjectIndex === projects.length - 1 ? 'not-allowed' : 'pointer'
+            cursor: currentProjectIndex === projects.length - 1 ? 'not-allowed' : 'pointer',
           }}
         >
           Next
@@ -57,7 +57,6 @@ export function Projects() {
         projectName={t(`projectName${currentProject.id}`)} 
         projectDesktopImage={currentProject.desktopImage}
         projectMobileImage={currentProject.mobileImage}
-        projectLogo={currentProject.logo}
         behanceLink={currentProject.behanceLink}
       >
         {t(`projectContent${currentProject.id}`)}

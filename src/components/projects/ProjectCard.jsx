@@ -1,8 +1,12 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next'
 
-export function ProjectCard ({ projectName, projectDesktopImage, projectMobileImage, projectLogo }) {
+
+export function ProjectCard ({ projectName, projectDesktopImage, projectMobileImage }) {
   const [anchoComponente, setAnchoComponente] = useState(0);
+
+  const { t } = useTranslation()
 
   const handleResize = () => {
     const ancho = document.getElementById('mainContainer').offsetWidth;
@@ -26,8 +30,7 @@ export function ProjectCard ({ projectName, projectDesktopImage, projectMobileIm
     <section className="project-card">
       <header className="project-card__header">
         <div>
-          <img src={projectLogo} alt="Figura circular blanca" />
-          <p>{projectName}</p>
+          <p>{t('projectGallery')}</p>
         </div>
       </header>
       <section className="project-card__images-container">

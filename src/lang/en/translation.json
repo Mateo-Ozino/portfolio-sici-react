@@ -65,5 +65,6 @@
   "submitButton": "Submit",
   "contactSuccess": "The mail has been sent successfully",
   "verMas": "See more",
-  "verMenos": "See less"
+  "verMenos": "See less",
+  "projectGallery": "Photo gallery" 
 }
