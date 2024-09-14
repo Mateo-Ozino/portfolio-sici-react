@@ -4,6 +4,7 @@ export const services = [
     "title": "Logo & Branding Design Package",
     "levels": [
       {
+        "id": 1,
         "name": "Basic Package",
         "idealFor": {
           "es": "Nuevos emprendedores",
@@ -23,6 +24,7 @@ export const services = [
         }
       },
       {
+        "id": 2,
         "name": "Standard Package",
         "idealFor": {
           "es": "Clientes ya establecidos con una visión más clara",
@@ -42,6 +44,7 @@ export const services = [
         }
       },
       {
+        "id": 3,
         "name": "Full Package",
         "idealFor": {
           "es": "Clientes que buscan abarcar más que la identidad visual",
@@ -67,6 +70,7 @@ export const services = [
     "title": "Social Media Content Package",
     "levels": [
       {
+        "id": 1,
         "name": "Basic Package",
         "idealFor": {
           "es": "Nuevos emprendedores",
@@ -86,6 +90,7 @@ export const services = [
         }
       },
       {
+        "id": 2,
         "name": "Standard Package",
         "idealFor": {
           "es": "Clientes ya establecidos",
@@ -105,6 +110,7 @@ export const services = [
         }
       },
       {
+        "id": 3,
         "name": "Full Package",
         "idealFor": {
           "es": "Clientes más interesados en la estética y largo plazo",
@@ -130,6 +136,7 @@ export const services = [
     "title": "Web/App Design Package",
     "levels": [
       {
+        "id": 1,
         "name": "Basic Package",
         "idealFor": {
           "es": "Nuevos emprendedores",
@@ -149,6 +156,7 @@ export const services = [
         }
       },
       {
+        "id": 2,
         "name": "Standard Package",
         "idealFor": {
           "es": "Proyectos con más aristas",
@@ -168,6 +176,7 @@ export const services = [
         }
       },
       {
+        "id": 3,
         "name": "Full Package",
         "idealFor": {
           "es": "Proyectos con gran cantidad de accionables",

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   scroll-behavior: smooth;
@@ -368,6 +369,21 @@ main {
 .projects {
   padding: 40px 40px 18px 40px;
 }
+.projects__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: initial;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.projects__nav button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 .projects .project {
   display: flex;
   flex-direction: column;
@@ -377,7 +393,24 @@ main {
   margin-bottom: 36px;
 }
 .projects .project p {
-  margin-bottom: 8px;
+  margin: 0;
+}
+.projects .project__content .truncated {
+  max-height: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Número de líneas que quieres mostrar */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.projects .project__content--truncator {
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom: 1px solid white;
+}
+.projects .project .project-card__images-container img {
+  border-radius: 0px 0px 36px 36px;
 }
 .projects .project .project-card .project-card__header {
   display: flex;
@@ -409,17 +442,16 @@ main {
   align-items: initial;
   gap: 8px;
 }
-.projects .project .project-card .project-card__images-container {
+.projects .project__behance-button {
+  margin-top: 10px;
+  padding: 14px 0 14px 0;
   display: flex;
-}
-.projects .project .project-card .project-card__images-container figure > img {
-  aspect-ratio: 16/9;
-}
-.projects .project .project-card .project-card__images-container :first-child img {
-  border-radius: 0px 0px 0px 36px;
-}
-.projects .project .project-card .project-card__images-container :last-child img {
-  border-radius: 0px 0px 36px 0px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  background: var(--Dark-purple, #A100B3);
 }
 
 .services {
@@ -894,25 +926,12 @@ p {
     margin-bottom: 30px;
     gap: 4px;
   }
-  .projects .project p {
-    margin-bottom: 16px;
-  }
   .projects .project .project-card .project-card__header {
     border-radius: 25px 25px 0px 0px;
     padding: 17px 30px;
   }
   .projects .project .project-card .project-card__header :first-child > img {
     width: 20px;
-  }
-  .projects .project .project-card .project-card__images-container figure > img {
-    aspect-ratio: 5/4;
-    object-fit: cover;
-  }
-  .projects .project .project-card .project-card__images-container :nth-child(3) > img {
-    border-radius: 0px 0px 25px 0px;
-  }
-  .projects .project .project-card .project-card__images-container :nth-child(1) > img {
-    border-radius: 0px 0px 0px 25px;
   }
   .projects :last-child {
     margin-bottom: 0;

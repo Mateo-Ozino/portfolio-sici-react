@@ -5,7 +5,7 @@ import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { motion, AnimatePresence } from 'framer-motion';
 
-export function ServiceCard({ service, index }) {
+export function ServiceCard({ service }) {
   const { t, i18n } = useTranslation()
 
   const levels = ["Basic Package", "Standard Package", "Pro Package"]
@@ -105,7 +105,7 @@ export function ServiceCard({ service, index }) {
             }}
             >
             <div className='services__card--header'>
-              <h2>{`${index + 1}.`}</h2>
+              <h2>{`${service.levels[currentLevel].id}.`}</h2>
               <h3>{service.levels[currentLevel].name}</h3>
             </div>
             <div className='services__card--content'>

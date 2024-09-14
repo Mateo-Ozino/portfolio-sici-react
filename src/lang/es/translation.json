@@ -50,6 +50,7 @@
   "timeframe": "Tiempo:",
   "price": "Precio:",
   "servicesDisclaimer": "El precio puede variar según adicionales",
+  "behance": "Ver en Behance",
   "nameLabel": "Nombre y Apellido",
   "emailLabel": "E-mail",
   "reasonLabel": "Motivo de contacto:",
@@ -62,5 +63,8 @@
   "fieldRequired": "Este campo es obligatorio",
   "fieldIncorrect": "El contenido es incorrecto",
   "submitButton": "Enviar",
-  "contactSuccess": "El correo ha sido enviado correctamente"
+  "contactSuccess": "El correo ha sido enviado correctamente",
+  "verMas": "Ver más",
+  "verMenos": "Ver menos",
+  "projectGallery": "Galeria de fotos"
 }

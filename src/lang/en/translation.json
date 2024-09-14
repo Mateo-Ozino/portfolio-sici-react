@@ -50,6 +50,7 @@
   "timeframe": "Time:",
   "price": "Price:",
   "servicesDisclaimer": "Price may vary according to additionals",
+  "behance": "Continue on Behance",
   "nameLabel": "Name and Last Name",
   "emailLabel": "E-mail",
   "reasonLabel": "Reason for contact:",
@@ -62,5 +63,8 @@
   "fieldRequired": "This field is required",
   "fieldIncorrect": "The content is incorrect",
   "submitButton": "Submit",
-  "contactSuccess": "The mail has been sent successfully"
+  "contactSuccess": "The mail has been sent successfully",
+  "verMas": "See more",
+  "verMenos": "See less",
+  "projectGallery": "Photo gallery" 
 }

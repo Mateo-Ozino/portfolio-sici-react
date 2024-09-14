@@ -1,26 +1,43 @@
 import PropTypes from "prop-types";
-import OpenNew from '../../assets/open_new.svg'
+import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next'
 
-export function ProjectCard ({ projectName, projectImages, projectLogo, behanceLink }) {
+
+export function ProjectCard ({ projectName, projectDesktopImage, projectMobileImage }) {
+  const [anchoComponente, setAnchoComponente] = useState(0);
+
+  const { t } = useTranslation()
+
+  const handleResize = () => {
+    const ancho = document.getElementById('mainContainer').offsetWidth;
+    setAnchoComponente(ancho);
+  };
+
+  useEffect(() => {
+    // Configuración inicial
+    handleResize();
+
+    // Agregar el evento de escucha del cambio de tamaño
+    window.addEventListener('resize', handleResize);
+
+    // Limpiar el evento de escucha al desmontar el componente
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <section className="project-card">
       <header className="project-card__header">
         <div>
-          <img src={projectLogo} alt="Figura circular blanca" />
-          <p>{projectName}</p>
-        </div>
-        <div>
-          <h5><a href={behanceLink} target="_blank" rel="noopener noreferrer">Behance</a></h5>
-          <span><img src={OpenNew} alt="Icono que redirecciona a Behance" /></span>
+          <p>{t('projectGallery')}</p>
         </div>
       </header>
       <section className="project-card__images-container">
         {
-          projectImages.map((image, index) =>
-            <figure key={index}>
-              <img src={image} alt={`Foto número ${index} del proyecto`}/>
-            </figure>
-          )
+          <figure>
+            <img src={anchoComponente > 768 ? projectDesktopImage : projectMobileImage} alt={`Fotos del proyecto`}/>
+          </figure>
         }
       </section>
     </section>
@@ -29,7 +46,7 @@ export function ProjectCard ({ projectName, projectImages, projectLogo, behanceL
 
 ProjectCard.propTypes = {
   projectName: PropTypes.string,
-  projectImages: PropTypes.array,
+  projectDesktopImage: PropTypes.string,
+  projectMobileImage: PropTypes.string,
   projectLogo: PropTypes.string,
-  behanceLink: PropTypes.string
 };
