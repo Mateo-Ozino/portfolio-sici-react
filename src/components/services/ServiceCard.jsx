@@ -11,7 +11,6 @@ export function ServiceCard({ service }) {
   const levels = ["Basic Package", "Standard Package", "Pro Package"]
 
   const [currentLevel, setCurrentLevel] = useState(0);
-  //const [allowScroll, setAllowScroll] = useState(true);
   const [touchStartX, setTouchStartX] = useState(0);
   const [touchStartY, setTouchStartY] = useState(0);
   const [touchEndX, setTouchEndX] = useState(0);
@@ -91,57 +90,60 @@ export function ServiceCard({ service }) {
         onTouchStart={handleTouchStart} 
         onTouchMove={handleTouchMove} 
         onTouchEnd={handleTouchEnd}
+        style={{position: 'relative', height: '100%'}}
         >
         {currentLevel > 0 ? <button onClick={handlePrev}><MdKeyboardArrowLeft /></button> : <div></div>}
-        <AnimatePresence initial={false}>
-          <motion.div 
-            className='services__card--content-container'
-            key={service.levels[currentLevel].name}
-            initial={{ opacity: 0, display: "none" }}
-            animate={{ opacity: 1, display: "flex" }}
-            exit={{ opacity: 0, display: "none" }}
-            transition={{
-              opacity: { duration: .5 }
-            }}
-            >
-            <div className='services__card--header'>
-              <h2>{`${service.levels[currentLevel].id}.`}</h2>
-              <h3>{service.levels[currentLevel].name}</h3>
-            </div>
-            <div className='services__card--content'>
-              <ul>
-                <li>
-                  <p>{t('idealFor')}</p>
-                  <p>{service.levels[currentLevel].idealFor[i18n.resolvedLanguage]}</p>
-                </li>
-                <li>
-                  <p>{t('deliverables')}</p>
-                  <p>{service.levels[currentLevel].deliverables[i18n.resolvedLanguage]}</p>
-                </li>
-                <li>
-                  <p>{t('timeframe')}</p>
-                  <p>{service.levels[currentLevel].timeframe[i18n.resolvedLanguage]}</p>
-                </li>
-                <li>
-                  <p>{t('price')}</p>
-                  <p>{service.levels[currentLevel].price[i18n.resolvedLanguage]}</p>
-                </li>
-              </ul>
-            </div>
-            <div className='services__card--disclaimer'>
-              <p>*Disclaimer: {t('servicesDisclaimer')}</p>
-            </div>
-            <div className='services__card--navigation-dots'>
-              {service.levels.map((level, index) => (
-                <span 
-                  key={index}
-                  className={`dot ${index === currentLevel ? 'active' : ''}`}
-                  onClick={() => setCurrentLevel(index)}
-                />
-              ))}
-            </div>
-          </motion.div>
-        </AnimatePresence>
+        <div className="services__card--content-wrapper">
+          <AnimatePresence initial={false} mode='wait'>
+            <motion.div 
+              className='services__card--content-container'
+              key={service.levels[currentLevel].name}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                opacity: { duration: .1 }
+              }}
+              >
+              <div className='services__card--header'>
+                <h2>{`${service.levels[currentLevel].id}.`}</h2>
+                <h3>{service.levels[currentLevel].name}</h3>
+              </div>
+              <div className='services__card--content'>
+                <ul>
+                  <li>
+                    <p>{t('idealFor')}</p>
+                    <p>{service.levels[currentLevel].idealFor[i18n.resolvedLanguage]}</p>
+                  </li>
+                  <li>
+                    <p>{t('deliverables')}</p>
+                    <p>{service.levels[currentLevel].deliverables[i18n.resolvedLanguage]}</p>
+                  </li>
+                  <li>
+                    <p>{t('timeframe')}</p>
+                    <p>{service.levels[currentLevel].timeframe[i18n.resolvedLanguage]}</p>
+                  </li>
+                  <li>
+                    <p>{t('price')}</p>
+                    <p>{service.levels[currentLevel].price[i18n.resolvedLanguage]}</p>
+                  </li>
+                </ul>
+              </div>
+              <div className='services__card--disclaimer'>
+                <p>*Disclaimer: {t('servicesDisclaimer')}</p>
+              </div>
+              <div className='services__card--navigation-dots'>
+                {service.levels.map((level, index) => (
+                  <span 
+                    key={index}
+                    className={`dot ${index === currentLevel ? 'active' : ''}`}
+                    onClick={() => setCurrentLevel(index)}
+                  />
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
         {currentLevel < service.levels.length - 1 && <button onClick={handleNext}><MdKeyboardArrowRight /></button>}
       </article>
     </>
