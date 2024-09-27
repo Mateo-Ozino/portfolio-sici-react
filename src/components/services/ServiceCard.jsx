@@ -102,7 +102,7 @@ export function ServiceCard({ service }) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{
-                opacity: { duration: .1 }
+                opacity: { duration: .13 }
               }}
               >
               <div className='services__card--header'>
