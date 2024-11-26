@@ -1,12 +1,11 @@
-import mateoLogo from '../assets/portfolio-mateo/mateo-logo.png'
-import magicLogo from '../assets/magicpedia/magic-logo.png'
-import chellueveLogo from '../assets/che-llueve/chellueve-logo.png'
 import mateoDesktop from '../assets/desktop/PortfolioMate.jpg'
 import mateoMobile from '../assets/mobile/PortfolioMate.jpg'
 import magicDesktop from '../assets/desktop/Magicpedia.jpg'
 import magicMobile from '../assets/mobile/Magicpedia.jpg'
 import chellueveDesktop from '../assets/desktop/Chellueve.jpg'
 import chellueveMobile from '../assets/mobile/Chellueve.jpg'
+import danielaDesktop from '../assets/desktop/BYDANIELAORTIZ-Desktop.jpg'
+import danielaMobile from '../assets/mobile/BYDANIELAORTIZ-Mobile.jpg'
 
 
 
@@ -16,7 +15,6 @@ export const projects = [
     "name": "Portfolio Redesign",
     "desktopImage": mateoDesktop,
     "mobileImage": mateoMobile,
-    "logo": mateoLogo,
     "behanceLink": "https://www.behance.net/gallery/191665063/Portfolio-Re-design-Showcase"
   },
   {
@@ -24,7 +22,6 @@ export const projects = [
     "name": "Magicpedia",
     "desktopImage": magicDesktop,
     "mobileImage": magicMobile,
-    "logo": magicLogo,
     "behanceLink": "https://www.behance.net/gallery/192012521/Magicpedia-Branding"
   },
   {
@@ -32,7 +29,13 @@ export const projects = [
     "name": "Che! Llueve",
     "desktopImage": chellueveDesktop,
     "mobileImage": chellueveMobile,
-    "logo": chellueveLogo,
     "behanceLink": "https://www.behance.net/gallery/193335727/Che-Llueve-Web-Design"
+  },
+  {
+    "id": 4,
+    "name": "By Daniela Ortiz",
+    "desktopImage": danielaDesktop,
+    "mobileImage": danielaMobile,
+    "behanceLink": "https://www.behance.net/gallery/210605827/Diseno-de-plataforma-Asesoria-de-Imagen"
   }
 ]

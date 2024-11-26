@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next'
 
 
-export function ProjectCard ({ projectName, projectDesktopImage, projectMobileImage }) {
+export function ProjectCard ({ projectDesktopImage, projectMobileImage }) {
   const [anchoComponente, setAnchoComponente] = useState(0);
 
   const { t } = useTranslation()
