@@ -105,7 +105,7 @@ export function Menu({ isNavHidden, handleNav }) {
         <section 
           className={"menu__credits " + (i18n.resolvedLanguage === 'es' ? "larger-text" : "")}
           >
-          <h5>{t("credits")}</h5>
+          <h5>{t("credits")}{new Date().getFullYear()}.</h5>
           <div>
             <button 
               type='submit'
